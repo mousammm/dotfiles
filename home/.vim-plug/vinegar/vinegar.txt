@@ -1,0 +1,12 @@
+|netrw.txt|.
+
+
+-       open file exp
+~       Open $HOME.
+CTRL-R CTRL-F           In command line mode, insert the path to the file
+                        under the cursor.  Similar to the native
+                        |c_CTRL-R_CTRL-F|, but resolves the path with respect
+                        to the parent directory.
+.	:    <file.txt>
+!       :!   <file.txt> 
+y.	yank file under cursor absolute path 

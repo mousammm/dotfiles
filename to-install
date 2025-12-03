@@ -1,0 +1,35 @@
+git
+stow
+wget
+upgrade bash
+
+# cli tools
+tree
+tldr 
+fzf 
+ngrok    local server to internet > tunnel
+tmux or make a mod for st 
+	split panes 
+	remember sessions
+croc 	to share file or dir withoud ssh
+
+make a system fetching cpu uses etc 
+make a script that searh for a specific string and return all the file and can put in quickfix list
+
+# dwm
+wifi | bluetooth | microfone | brightness 
+sound | system and | apps 
+disk management linux
+music player script 
+cpu mem date time 
+all the apps running 
+ffpeg(nn) sxiv(img)
+pycom 
+nofiy send | dunst 
+
+# scripts 
+screent shot 
+change wallpaper + pywall 
+dwm get all the links from a file and prompt 
+dwm bookmark 
+usb auto detect 

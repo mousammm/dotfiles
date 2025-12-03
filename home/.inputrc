@@ -1,0 +1,22 @@
+# bind -f ~/.inputrc
+
+# no sound on error 
+set bell-style none 
+
+# show which mode in
+set show-mode-in-prompt on
+set vi-ins-mode-string "I"
+set vi-cmd-mode-string "N"
+
+# Display completion matches upon the first press of the TAB key
+set show-all-if-ambiguous on
+# Enable cycling through options with TAB
+"\t": menu-complete
+# Enable colors when completing filenames and directories (optional)
+set colored-stats on
+
+"\C-k": history-search-backward
+"\C-j": history-search-forward
+
+set keymap vi-insert
+"\C-l": clear-screen

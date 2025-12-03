@@ -1,0 +1,25 @@
+modify st to do
+
+- tmux like yank go to vi mode and copy everything in clipboard 
+	prefix C^v - go in vi yank mode 
+
+- reserrect and continnium
+	prefix C^S - save the state of the terminal 
+	prefix C^R - load the state of the terminal 
+
+- different tabs
+
+- window
+
+	# making the window
+	prefix |  - vertical split 
+	prefix -  - horizontal split 
+
+	# moving the window to dir 
+	prefix C-h move the selected window to left 
+	prefix C-j move the selected window to down
+	prefix C-k move the selected window to top 
+	prefix C-l move the selected window to right  
+
+	# sizing the open window 
+	prefix C-
