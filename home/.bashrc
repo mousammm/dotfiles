@@ -23,7 +23,7 @@ export VISUAL=vim
 set -o vi	# enables vi in bash prompt
 
 # export PS1="\[\e[32m\]\u@\h\[\e[0m\]:\[\e[34m\]\w\[\e[0m\]\n\$ "
-export PS1="\[\e[34m\]\w\[\e[0m\]\n\$ "
+export PS1="\[\e[4m\]\w\[\e[0m\]\n\$ "
 
 # tips
 # C^R  to reverse search history 

@@ -1,0 +1,6 @@
+yay -S simple-mtfs
+yay -S fuse2 # fusermount
+
+simple-mtpfs -l # show all deveices connected 
+simple-mtpfs --device 1 ~/device # show all deveices connected 
+fusermount -u ~/device

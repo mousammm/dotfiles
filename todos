@@ -1,19 +1,13 @@
-git
-stow
-wget
-upgrade bash
+sound 		a script to change vol etc 
+get phone mount 
+scrnshot script 
+and video playing 
+music playing 
+transparency	picom
+bg chnage 	script 
+status bar add apu mem etc 
 
 # cli tools
-tree
-tldr 
-fzf 
-ngrok    local server to internet > tunnel
-tmux or make a mod for st 
-	split panes 
-	remember sessions
-croc 	to share file or dir withoud ssh
-
-make a system fetching cpu uses etc 
 make a script that searh for a specific string and return all the file and can put in quickfix list
 
 # dwm
