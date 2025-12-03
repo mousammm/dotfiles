@@ -45,9 +45,9 @@
 # APPLICATION
 
 * firefox 
-> u-block 
-> settings > ext and themes > set theme 
-> Open previous windows and tabs
-> only websearch & shortcut on HOME
+> * u-block 
+> * settings > ext and themes > set theme 
+> * Open previous windows and tabs
+> * only websearch & shortcut on HOME
 
 
