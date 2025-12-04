@@ -10,7 +10,8 @@ nnoremap <Esc> :nohlsearch<CR>
 set wildmenu
 
 " colorscheme wal
-colorscheme habamax
+colorscheme industry
+colorscheme lunaperche
 
 source ~/dotfiles/home/.vim-plug/vinegar/vinegar.vim
 source ~/dotfiles/home/.vim-plug/auto_pairs.vim

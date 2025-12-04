@@ -13,9 +13,17 @@
 * libxinerama
 * ttf-dejavu    
 
+# FONTS
+
+* yay -Ss nerd-fonts 		search for available nerd font 
+* sudo pacman -S ttf-jetbrains-mono-nerd 
+> change dwm | dmenu | st > JetBrainsMono Nerd Font
+* sudo fc-cache -fv
+
 * https://git.suckless.org/dwm
 * https://git.suckless.org/dmenu
 * https://git.suckless.org/st
+* pacman -S kitty
 
 # PACKAGE MANAGE
 
@@ -30,8 +38,9 @@
 * wget    		:download stuff from internet
 * feh     		:wallpaper daemon
 * vim     		:code editor
-* xorg-xrandr   	:monitor refresh rate 
 * picom 		:compositer transparency
+* xorg-xrandr   	:monitor refresh rate 
+* libnotify,dunst 	:notification
 * yazi 			:file mgr
 * ffmpeg 		:video audio
 
@@ -49,5 +58,3 @@
 > * settings > ext and themes > set theme 
 > * Open previous windows and tabs
 > * only websearch & shortcut on HOME
-
-
