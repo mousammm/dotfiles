@@ -5,15 +5,15 @@ static const unsigned int borderpx  = 0;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
-//static const char *fonts[]          = { "monospace:size=13" };
+//static const char *fonts[]          = { "monospace:size=10" };
 static const char *fonts[]          = { "JetBrainsMono Nerd Font:size=13" };
-//static const char dmenufont[]       = "monospace:size=13";
+//static const char dmenufont[]       = "monospace:size=10";
 static const char dmenufont[]       = "JetBrainsMono Nerd Font:size=13";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#005577";
+static const char col_cyan[]        = "#333333";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -36,7 +36,7 @@ static const Rule rules[] = {
 /* layout(s) */
 static const float mfact     = 0.5; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
-static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
+static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
 static const int refreshrate = 120;  /* refresh rate (per second) for client move/resize */
 
@@ -63,6 +63,15 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 //static const char *termcmd[]  = { "st", NULL };
 static const char *termcmd[]  = { "kitty", NULL };
+
+// voulume 
+/* Add near other static const char* definitions */
+static const char *upvol[]   = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "+5%", NULL };
+static const char *downvol[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "-5%", NULL };
+static const char *mutevol[] = { "pactl", "set-sink-mute", "@DEFAULT_SINK@", "toggle", NULL };
+//static const char *dmscripts[] = { "/home/mousam/dotfiles/scripts/sel-dm.sh", NULL };
+
+
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -99,6 +108,13 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+
+	// volume 
+	{ MODKEY,                       XK_minus,   	spawn, 		{.v = downvol } },
+	{ MODKEY,                       XK_equal,   	spawn, 		{.v = upvol } },
+	{ MODKEY|ShiftMask,             XK_p,     	spawn, 		{.v = mutevol } },
+	{ MODKEY|ShiftMask, 		XK_s, 		spawn, 		SHCMD("/home/mousam/dotfiles/scripts/sel-dm.sh") },
+	//{ MODKEY|ShiftMask,    		XK_s,           spawn,          {.v = dmscripts },
 };
 
 /* button definitions */

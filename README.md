@@ -2,6 +2,8 @@
 
 # ARCH DUAL BOOT LOADER 
 
+* pulseaudio (pactl)
+* Network mgr (nmcli)
 * efibootmgr   
 * os-prober   
 
@@ -11,6 +13,7 @@
 * libx11 
 * linxft
 * libxinerama
+* sudo pacman -S xorg-xsetroot (dwm status bar)
 * ttf-dejavu    
 
 # FONTS
@@ -43,10 +46,14 @@
 * libnotify,dunst 	:notification
 * yazi 			:file mgr
 * ffmpeg 		:video audio
+* mpv 			:vieo player 
+* sxiv			:img viewer
+* fzf
+* sudo pacman -S ueberzug
+* xclip 		:copy to sys clip board 
 
 # to install
 
-* fzf
 * ngrok			tunneling ports
 * tmux
 * croc			share file no ssh
