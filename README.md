@@ -50,6 +50,8 @@
 * fzf
 * sudo pacman -S ueberzug
 * xclip 		:copy to sys clip board 
+* tmux 
+* fastfetch
 
 # to install
 
@@ -57,6 +59,7 @@
 * tmux
 * croc			share file no ssh
 * picom 		:compositer transparency
+* zathura 		:pdf viewer
 
 # APPLICATION
 
