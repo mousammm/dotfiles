@@ -10,8 +10,11 @@ nnoremap <Esc> :nohlsearch<CR>
 set wildmenu
 
 " colorscheme wal
-colorscheme industry
-colorscheme lunaperche
+
+colorscheme default
+colorscheme desert
+colorscheme retrobox
+" colorscheme lunaperche
 
 source ~/dotfiles/home/.vim-plug/vinegar/vinegar.vim
 source ~/dotfiles/home/.vim-plug/auto_pairs.vim

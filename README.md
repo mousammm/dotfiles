@@ -41,10 +41,9 @@
 * wget    		:download stuff from internet
 * feh     		:wallpaper daemon
 * vim     		:code editor
-* picom 		:compositer transparency
 * xorg-xrandr   	:monitor refresh rate 
 * libnotify,dunst 	:notification
-* yazi 			:file mgr
+* yazi/nnn 		:file mgr
 * ffmpeg 		:video audio
 * mpv 			:vieo player 
 * sxiv			:img viewer
@@ -57,11 +56,16 @@
 * ngrok			tunneling ports
 * tmux
 * croc			share file no ssh
+* picom 		:compositer transparency
 
 # APPLICATION
 
+* pacman -S qutebrowser
 * firefox 
 > * u-block 
 > * settings > ext and themes > set theme 
 > * Open previous windows and tabs
 > * only websearch & shortcut on HOME
+* GIMP:img editing
+* darktable:img
+* kadenlive:

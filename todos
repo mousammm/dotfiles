@@ -29,3 +29,7 @@ dwm bookmark
 usb auto detect 
 use udev and systemd-mount to auto mount 
 fzf and ubzerberg
+
+copy file all links | dmenu
+md previewer
+learn bash
