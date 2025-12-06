@@ -2,9 +2,9 @@
 static const Block blocks[] = {
 	/*Icon*/	/*Command*/		/*Update Interval*/	/*Update Signal*/
 	{"", "~/dotfiles/suckless/dwmblocks/modules/net.sh", 		60, 1},
-	{"", "~/dotfiles/suckless/dwmblocks/modules/temp.sh", 		60, 1},
+	{"", "~/dotfiles/suckless/dwmblocks/modules/temp.sh", 		30, 1},
 	{"", "~/dotfiles/suckless/dwmblocks/modules/volume.sh", 	 0, 10},
-	{"", "~/dotfiles/suckless/dwmblocks/modules/memory.sh", 	60, 1},
+	{"", "~/dotfiles/suckless/dwmblocks/modules/memory.sh", 	5, 1},
      	{"",  "~/dotfiles/suckless/dwmblocks/modules/datetime.sh",      60, 1},
 };
 
