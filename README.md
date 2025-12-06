@@ -1,5 +1,7 @@
 # Dependencies 
 
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/e43ca9fa-4182-4d81-860a-4f3b91b4ca99" />
+
 # ARCH DUAL BOOT LOADER 
 
 * pulseaudio (pactl)
