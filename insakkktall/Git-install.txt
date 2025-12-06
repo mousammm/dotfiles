@@ -27,9 +27,6 @@ git config --global alias.st status
 git config --global push.default simple
 git config --global pull.rebase true
 
-    SSH keys: C:\Users\YourName\.ssh\
-    Git config: C:\Users\YourName\.gitconfig
-
 - Linux 
   - vim ~/.bashrc or ~/.zshrc
   - $ eval "$(ssh-agent -s)" {paste this in the .file}

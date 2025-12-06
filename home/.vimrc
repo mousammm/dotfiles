@@ -1,5 +1,6 @@
 set nocompatible
 syntax on
+set autoindent
 set incsearch
 set number
 set mouse=a
@@ -9,14 +10,7 @@ nnoremap <Esc> :nohlsearch<CR>
 
 set wildmenu
 
-" colorscheme wal
-
-colorscheme default
-" colorscheme desert
-" colorscheme retrobox
-" colorscheme lunaperche
-
-source ~/dotfiles/home/.vim-plug/vinegar/vinegar.vim
-source ~/dotfiles/home/.vim-plug/auto_pairs.vim
-source ~/dotfiles/home/.vim-plug/comment.vim
+source ~/.vim-plug/vinegar/vinegar.vim
+source ~/.vim-plug/auto_pairs.vim
+source ~/.vim-plug/comment.vim
 

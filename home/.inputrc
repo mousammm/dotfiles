@@ -19,4 +19,4 @@ set colored-stats on
 "\C-j": history-search-forward
 
 set keymap vi-insert
-"\C-l": clear-screen
+"\C-l": clear-screen 

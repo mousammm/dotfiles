@@ -1,6 +1,0 @@
-
-				 _ place where file will get link 
-				/
-ln -sfv kitty.conf ~/.config/kitty/
-	|
-	-file to link
