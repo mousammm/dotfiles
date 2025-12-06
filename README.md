@@ -1,5 +1,7 @@
 # Dependencies 
 
+![Setup PNG](asset/dev.png)
+
 # ARCH DUAL BOOT LOADER 
 
 * pulseaudio (pactl)
@@ -9,7 +11,7 @@
 
 # SUCKLESS DEPENDENCIES
 
-* base-devel
+* base-devel/gdb
 * libx11 
 * linxft
 * libxinerama

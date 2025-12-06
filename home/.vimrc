@@ -12,8 +12,8 @@ set wildmenu
 " colorscheme wal
 
 colorscheme default
-colorscheme desert
-colorscheme retrobox
+" colorscheme desert
+" colorscheme retrobox
 " colorscheme lunaperche
 
 source ~/dotfiles/home/.vim-plug/vinegar/vinegar.vim
