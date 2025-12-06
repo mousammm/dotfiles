@@ -14,8 +14,8 @@ while true; do
     mem=$(free -h | awk '/^Mem:/ {print $3 "/" $2}')
     
     # Get current date and time
-    datetime=$(date '+%a %d %b | %H:%M:%S')
-    
+    datetime=$(date '+%a %d %b | %I:%M %p')
+
     # Update status bar
     xsetroot -name "$net | $vol | $cpu_temp | $mem | $datetime"
     
