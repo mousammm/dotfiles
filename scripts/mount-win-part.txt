@@ -1,0 +1,15 @@
+#
+
+# sudo pacman -S ntfs-3g
+# mkdir /mnt/windows_d 
+# sudo mount -t ntfs-3g /dev/nvme0n1p5 /mnt/windows_d
+# sudo umount /mnt/windows_d
+
+# AUTO MOUNT ON BOOT
+# sudo blkid /dev/nvme0n1p5  -> UUID 34003BD4003B9C34
+# vim /etc/fstab
+# UUID=34003BD4003B9C34 /mnt/windows_d ntfs-3g uid=1000,gid=1000,umask=022 0 0
+# sudo mount -a to  # mount all fstab entries without rebooting
+
+# /dev/nvme0n1p5
+UUID=34003BD4003B9C34 /mnt/windows_d ntfs-3g uid=1000,gid=1000,umask=022 0 0
