@@ -20,5 +20,5 @@ fi
 if [ -n "$SELECTED" ]; then
     feh --bg-fill "$WALLPAPER_DIR/$SELECTED"
     # echo "✅ Wallpaper set to: $SELECTED"
-    notify-send "✅ Wallpaper set to: $SELECTED"
+    notify-send "Wallpaper changed" "$SELECTED"
 fi

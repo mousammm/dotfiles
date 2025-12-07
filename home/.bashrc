@@ -28,3 +28,8 @@ alias vm="pactl set-sink-mute @DEFAULT_SINK@ toggle"
 # ENV VARIABLES
 export EDITOR=vim
 export VISUAL=vim
+
+export GOON="$HOME/dotfiles/scripts/goon.sh"
+alias goon="source \"\$GOON\""
+# or if it should be an executable script:
+alias goon="\"\$GOON\""

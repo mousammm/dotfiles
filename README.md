@@ -54,6 +54,7 @@
 * xclip 		:copy to sys clip board 
 * tmux 
 * fastfetch
+* ntfs-3g 		:mount windows part to linux
 
 # to install
 

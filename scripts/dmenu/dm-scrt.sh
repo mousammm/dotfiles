@@ -11,4 +11,4 @@ fi
 
 screenshot=$(scrot $SCRT_DIR/%Y-%m-%d-%T-screenshot.png)
 # echo "scrnt saved at $SCRT_DIR/"
-notify-send "scrnt saved at $SCRT_DIR/"
+notify-send "SCREENSHOT SAVED" "$SCRT_DIR/"

@@ -1,6 +1,6 @@
+#!/bin/bash
 
-ffmpeg -f x11grab -s 1920x1080 -framerate 30 -i :0.0 \
-       -f pulse -i default \
-       -c:v libx264 -preset veryfast -crf 23 \
-       -c:a aac -b:a 192k \
-       output.mp4
+# sudo pacman -S ffmpeg
+
+ffmpeg -f x11grab -s 1920x1080 -framerate 30 -i :0.0 -f alsa -i default ~/output.mp4
+notify-send "REC. ENDED"
