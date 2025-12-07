@@ -66,12 +66,10 @@ static const char *termcmd[]  = { "kitty", NULL };
 
 // voulume 
 /* Add near other static const char* definitions */
-//static const char *upvol[]   = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "+5%", NULL };
-//static const char *downvol[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "-5%", NULL };
-//static const char *mutevol[] = { "pactl", "set-sink-mute", "@DEFAULT_SINK@", "toggle", NULL };
-static const char *volup[]   = { "/home/mousam/dotfiles/suckless/dwmblocks/modules/vol-up.sh", "up", NULL };
-static const char *voldown[] = { "/home/mousam/dotfiles/suckless/dwmblocks/modules/vol-up.sh", "down", NULL };
-static const char *voltoggle[] = { "/home/mousam/dotfiles/suckless/dwmblocks/modules/vol-up.sh", "toggle", NULL };
+static const char *volup[]   = { "sh", "-c", "~/dotfiles/suckless/dwmblocks/modules/vol-up.sh up", NULL };
+static const char *voldown[]   = { "sh", "-c", "~/dotfiles/suckless/dwmblocks/modules/vol-up.sh down", NULL };
+static const char *voltoggle[]   = { "sh", "-c", "~/dotfiles/suckless/dwmblocks/modules/vol-up.sh toggle", NULL };
+static const char *selScriptsdm[]   = { "sh", "-c", "~/dotfiles/scripts/sel-dm.sh", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -113,7 +111,8 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_minus,   	spawn, 		{.v = voldown }   },
 	{ MODKEY,                       XK_equal,   	spawn, 		{.v = volup} 	  },
 	{ MODKEY|ShiftMask,             XK_p,     	spawn, 		{.v = voltoggle } },
-	{ MODKEY|ShiftMask, 		XK_s, 		spawn, 		SHCMD("/home/mousam/dotfiles/scripts/sel-dm.sh") },
+	/* { MODKEY|ShiftMask, 		XK_s, 		spawn, 		SHCMD("/home/mousam/dotfiles/scripts/sel-dm.sh") }, */
+	{ MODKEY|ShiftMask, 		XK_s, 		spawn, 		{.v = selScriptsdm } },
 	//{ MODKEY|ShiftMask,    		XK_s,           spawn,          {.v = dmscripts },
 };
 
