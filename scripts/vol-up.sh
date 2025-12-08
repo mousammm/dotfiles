@@ -2,6 +2,8 @@
 
 # Volume control script with dwmblocks signal support
 
+# pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}'
+
 case "$1" in
     up)
         # Increase volume by 5%
