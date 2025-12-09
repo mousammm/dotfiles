@@ -5,9 +5,10 @@ HISTFILESIZE=2000
 
 shopt -s checkwinsize 		# window size check | update lines and columns 
 
-set -o vi	# enables vi in bash prompt
-
 export PS1="\[\e[4m\]\w\[\e[0m\]\n\$ "
+set -o vi	# enables vi in bash prompt
+bind 'set completion-ignore-case on'
+bind 'set show-all-if-ambiguous on'
 
 # tips
 # C^R  to reverse search history 
@@ -33,3 +34,9 @@ export GOON="$HOME/dotfiles/scripts/goon.sh"
 alias goon="source \"\$GOON\""
 # or if it should be an executable script:
 alias goon="\"\$GOON\""
+
+export KITTY_CP="$HOME/dotfiles/scripts/kittyC.sh"
+alias kk="source \"\$KITTY_CP\""
+# or if it should be an executable script:
+alias kk="\"\$KITTY_CP\""
+

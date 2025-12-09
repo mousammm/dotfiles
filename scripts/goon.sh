@@ -11,9 +11,12 @@ DATE_TIME=$(date '+%b %d (%a) %I:%M%p')
 
 
 
+echo ""
 echo "$HOST_NAME"@"$USER_NAME"
+echo "-----------"
 echo "network ($NET)"
 echo "Volume ($VOL)"
 echo "CPU $TEMP"
 echo "MEM $MEM"
+echo ""
 echo "$DATE_TIME"
