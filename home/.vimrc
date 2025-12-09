@@ -8,7 +8,6 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
-" Makefile-specific settings
 " autocmd FileType Makefile setlocal noexpandtab
 function! Makefilesettings()
     if expand('%:t') =~? '^Makefile' || expand('%:e') ==? 'mk'
@@ -31,7 +30,6 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
-nnoremap <silent> <Esc><Esc> :nohlsearch<CR>
 nnoremap <leader><Esc> :nohlsearch<CR>
 
 " search and replace
@@ -47,3 +45,20 @@ source ~/.vim-plug/vinegar/vinegar.vim
 source ~/.vim-plug/comment.vim
 source ~/.vim-plug/pacun.vim
 source ~/.vim-plug/cfix.vim
+
+nnoremap <C-w>h <C-w>h
+nnoremap <C-w>j <C-w>j
+nnoremap <C-w>k <C-w>k
+nnoremap <C-w>l <C-w>l
+
+" Window splitting
+nnoremap <C-w>v :vsplit<CR>
+nnoremap <C-w>s :split<CR>
+nnoremap <C-w>n :new<CR>
+nnoremap <C-w>q :close<CR>
+
+" Quickfix window specific
+nnoremap <leader>co :copen<CR>
+nnoremap <leader>cc :cclose<CR>
+nnoremap <leader>cn :cnext<CR>
+nnoremap <leader>cp :cprevious<CR>

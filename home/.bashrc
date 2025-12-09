@@ -1,9 +1,11 @@
+shopt -s checkwinsize  # win col and height
+shopt -s histappend
 HISTCONTROL=ignoreboth		# no duplicate line 
-shopt -s histappend 		# append to the history file
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=5000
+HISTFILESIZE=10000
+HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S "
+PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
-shopt -s checkwinsize 		# window size check | update lines and columns 
 
 export PS1="\[\e[4m\]\w\[\e[0m\]\n\$ "
 set -o vi	# enables vi in bash prompt
@@ -32,11 +34,9 @@ export VISUAL=vim
 
 export GOON="$HOME/dotfiles/scripts/goon.sh"
 alias goon="source \"\$GOON\""
-# or if it should be an executable script:
 alias goon="\"\$GOON\""
 
 export KITTY_CP="$HOME/dotfiles/scripts/kittyC.sh"
 alias kk="source \"\$KITTY_CP\""
-# or if it should be an executable script:
 alias kk="\"\$KITTY_CP\""
 
