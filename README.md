@@ -42,7 +42,7 @@
 * stow    		:symlinking to ~
 * wget    		:download stuff from internet
 * feh     		:wallpaper daemon
-* vim     		:code editor
+* gvim/vim     		:code editor
 * xorg-xrandr   	:monitor refresh rate 
 * libnotify,dunst 	:notification
 * yazi/nnn 		:file mgr
@@ -69,6 +69,7 @@
 * pacman -S qutebrowser
 * firefox 
 > * u-block 
+> * unhook 
 > * settings > ext and themes > set theme 
 > * Open previous windows and tabs
 > * only websearch & shortcut on HOME

@@ -1,9 +1,7 @@
 #!/bin/bash
 
-SH=$(find $HOME/dotfiles/scripts/ -type f -iname "*.sh")
+SH=$(ls $HOME/dotfiles/scripts/dmenu | dmenu -i -l 20 -p "All scripts:")
 
-SEL_SH=$(echo "$SH" | dmenu -i -l 20 -p "All scripts:")
-[[ "$SEL_SH" == " " ]] && exit 1
+[[ "$SH" == " " ]] && exit 1
 
-# echo "$SEL_SH"
-eval "$SEL_SH"
+eval "$HOME/dotfiles/scripts/dmenu/$SH"
