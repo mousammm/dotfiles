@@ -1,3 +1,10 @@
+set t_Co=256
+set background=dark
+
+" Force proper cursor colors
+highlight Cursor guifg=black guibg=white
+highlight lCursor guifg=black guibg=white
+highlight CursorIM guifg=black guibg=white
 " set beep off
 set noerrorbells
 set visualbell
@@ -43,7 +50,7 @@ set wildmenu
 
 source ~/.vim-plug/vinegar/vinegar.vim
 source ~/.vim-plug/comment.vim
-source ~/.vim-plug/pacun.vim
+source ~/.vim-plug/pacum.vim
 source ~/.vim-plug/cfix.vim
 
 nnoremap <C-w>h <C-w>h
