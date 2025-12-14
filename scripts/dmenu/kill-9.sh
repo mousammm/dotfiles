@@ -2,6 +2,8 @@
 
 
 APP=$(echo "" | dmenu -p "Enter text:")
+[[ "$APP" == "" ]] && exit 1
+
 PGREP=$(pgrep "$APP")
 
 kill -9 "$PGREP" 

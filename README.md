@@ -11,7 +11,7 @@
 
 # SUCKLESS DEPENDENCIES
 
-* base-devel/gdb
+* base-devel/gdb/valgrind
 * libx11 
 * linxft
 * libxinerama

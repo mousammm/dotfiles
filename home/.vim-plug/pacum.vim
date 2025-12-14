@@ -22,7 +22,7 @@ if &background == 'dark'
   
   " UI elements - CURRENT LINE NUMBER WHITE, others gray
   hi LineNr ctermbg=NONE ctermfg=8 guibg=NONE guifg=#808080  " Gray line numbers
-  hi CursorLineNr ctermbg=NONE ctermfg=15 guibg=NONE guifg=#ffffff  " WHITE current line number
+  hi CursorLineNr ctermbg=NONE ctermfg=255 guibg=NONE guifg=#ffffff  " WHITE current line number
   
   " Make sure CursorLine is transparent too if you want
   hi CursorLine ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
