@@ -6,7 +6,6 @@ HISTFILESIZE=10000
 HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S "
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
-
 export PS1="\[\e[4m\]\w\[\e[0m\]\n\$ "
 set -o vi	# enables vi in bash prompt
 bind 'set completion-ignore-case on'
@@ -32,10 +31,6 @@ alias vm="pactl set-sink-mute @DEFAULT_SINK@ toggle"
 # ENV VARIABLES
 export EDITOR=vim
 export VISUAL=vim
-
-export GOON="$HOME/dotfiles/scripts/goon.sh"
-alias goon="source \"\$GOON\""
-alias goon="\"\$GOON\""
 
 export KITTY_CP="$HOME/dotfiles/scripts/kittyC.sh"
 alias kk="source \"\$KITTY_CP\""
