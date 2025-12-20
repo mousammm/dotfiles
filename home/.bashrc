@@ -15,18 +15,10 @@ bind 'set show-all-if-ambiguous on'
 # C^R  to reverse search history 
 
 # ALIAS
-alias l='ls -l --color=auto'
-alias ls='ls --color=auto'
-alias ll='ls -lSah --group-directories-first --color=auto'
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
+alias l='ls -l'
+alias ll='ls -lSah --group-directories-first'
 alias gaa='git add . && git commit -a'
 
-# sound 
-alias vu="pactl set-sink-volume @DEFAULT_SINK@ +5%"
-alias vd="pactl set-sink-volume @DEFAULT_SINK@ -5%"
-alias vm="pactl set-sink-mute @DEFAULT_SINK@ toggle"
 
 # ENV VARIABLES
 export EDITOR=vim
@@ -35,4 +27,3 @@ export VISUAL=vim
 export KITTY_CP="$HOME/dotfiles/scripts/kittyC.sh"
 alias kk="source \"\$KITTY_CP\""
 alias kk="\"\$KITTY_CP\""
-
