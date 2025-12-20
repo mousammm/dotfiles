@@ -12,4 +12,4 @@ if [[ -z "$WALL" ]]; then
 fi
 
 echo "$WALL"
-swww img "$WALL_DIR/$WALL" --transition-step 10 --transition-fps 100 --transition-type simple
+swww img "$WALL_DIR/$WALL" --transition-step 1 --transition-fps 100 --transition-type simple
