@@ -27,5 +27,3 @@ case "$1" in
         ;;
 esac
 
-# Send signal 10 to dwmblocks to update the volume display
-pkill -RTMIN+10 dwmblocks

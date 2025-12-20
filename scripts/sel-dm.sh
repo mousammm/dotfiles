@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SH=$(ls $HOME/dotfiles/scripts/dmenu | dmenu -i -l 20 -p "All scripts:")
+SH=$(ls $HOME/dotfiles/scripts/dmenu | fzf --reverse --height 10 --info=hidden)
 
 [[ "$SH" == " " ]] && exit 1
 

@@ -9,25 +9,12 @@
 * efibootmgr   
 * os-prober   
 
-# SUCKLESS DEPENDENCIES
-
-* base-devel/gdb/valgrind
-* libx11 
-* linxft
-* libxinerama
-* sudo pacman -S xorg-xsetroot (dwm status bar)
-* ttf-dejavu    
-
 # FONTS
 
 * yay -Ss nerd-fonts 		search for available nerd font 
 * sudo pacman -S ttf-jetbrains-mono-nerd 
-> change dwm | dmenu | st > JetBrainsMono Nerd Font
 * sudo fc-cache -fv
 
-* https://git.suckless.org/dwm
-* https://git.suckless.org/dmenu
-* https://git.suckless.org/st
 * pacman -S kitty
 
 # PACKAGE MANAGE
