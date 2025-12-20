@@ -11,5 +11,5 @@ if [[ -z "$WALL" ]]; then
     exit 1
 fi
 
-echo "$WALL"
-swww img "$WALL_DIR/$WALL" --transition-step 1 --transition-fps 100 --transition-type simple
+swww img "$WALL_DIR/$WALL" --transition-step 3 --transition-fps 100 --transition-type simple
+echo "Wall:$WALL_DIR$WALL"
