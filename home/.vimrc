@@ -14,6 +14,7 @@ set t_vb=  " Disable visual bell in terminalo
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set nowrap
 
 " autocmd FileType Makefile setlocal noexpandtab
 function! Makefilesettings()

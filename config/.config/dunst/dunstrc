@@ -4,10 +4,10 @@
     width = 300
     height = (0, 300)
     offset = (10, 50)
-    transparency = 30
+    transparency = 50
     padding = 3
     frame_width = 1
-    frame_color = "#ffffff"
+    #frame_color = "#ffffff"
     gap_size = 0
     separator_color = frame
     font = JetBrainsMono Nerd Font
@@ -19,18 +19,18 @@
     mouse_right_click = close_all
 
 [urgency_low]
-    background = "#222222"
+    #background = "#222222"
     foreground = "#888888"
     timeout = 10
 
 [urgency_normal]
-    background = "#1b1d1e"
+    #background = "#1b1d1e"
     foreground = "#ffffff"
     timeout = 10
     override_pause_level = 30
 
 [urgency_critical]
-    background = "#900000"
+    #background = "#900000"
     foreground = "#ffffff"
     frame_color = "#ff0000"
     timeout = 0
