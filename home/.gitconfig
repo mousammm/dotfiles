@@ -1,7 +1,6 @@
 [user]
-
-        name = mousammm
-        email = mxmssdia@gmail.com
+    name = mousammm
+    email = mxmssdia@gmail.com
 [init]
 	defaultBranch = main
 [core]

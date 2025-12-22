@@ -27,3 +27,5 @@ export VISUAL=vim
 export KITTY_CP="$HOME/dotfiles/scripts/kittyC.sh"
 alias kk="source \"\$KITTY_CP\""
 alias kk="\"\$KITTY_CP\""
+
+eval "$(fzf --bash)"
