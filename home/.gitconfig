@@ -1,7 +1,13 @@
 [user]
     name = mousammm
     email = mxmssdia@gmail.com
+
 [init]
 	defaultBranch = main
+
 [core]
 	editor = vim
+
+[alias]
+  co = checkout 
+  ol = log --oneline --graph
