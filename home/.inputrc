@@ -5,8 +5,8 @@ set bell-style none
 
 # show which mode in
 set show-mode-in-prompt on
-set vi-ins-mode-string "I"
-set vi-cmd-mode-string "N"
+set vi-ins-mode-string ">"
+set vi-cmd-mode-string "#"
 
 # Display completion matches upon the first press of the TAB key
 set show-all-if-ambiguous on

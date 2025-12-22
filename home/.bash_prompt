@@ -1,0 +1,55 @@
+
+# PROMPT 
+
+#:main - Clean branch
+#:main % - Untracked files present
+#:main * - Modified files (unstaged)
+#:main + - Staged changes
+#:main *% - Both modified and untracked
+#:main *+ - Both staged and unstaged changes
+#:main *+% - All three: staged, unstaged, and untracked
+
+# git_branch_display() {
+#     git branch 2>/dev/null | grep '*' | sed 's/* /:/'
+# 
+#     if [[ -n "$branch" ]]; then
+#         # Check for untracked files
+#         if git status --porcelain 2>/dev/null | grep -q '^??'; then
+#             echo "$branch?"
+#         else
+#             echo "$branch"
+#         fi
+#     fi
+# }
+
+#export PS1='on \W$(git_branch_display) \n '
+git_branch_display() {
+    # Quiet check for git repo
+    if ! git rev-parse --git-dir > /dev/null 2>&1; then
+        return
+    fi
+    
+    local branch=$(git symbolic-ref --short HEAD 2>/dev/null || 
+                   git rev-parse --short HEAD 2>/dev/null)
+    [[ -z "$branch" ]] && return
+    
+    local symbols=""
+    
+    # Using --porcelain=v1 for consistent output
+    while IFS= read -r line; do
+        case "${line:0:2}" in
+            "??") symbols="${symbols}%" ;;  # Untracked
+            " M"|" D") symbols="${symbols}*" ;;  # Unstaged mod/delete
+            "M "|"A "|"D "|"R ") symbols="${symbols}+" ;;  # Staged
+            "MM"|"AM") symbols="${symbols}*+" ;;  # Both staged & unstaged
+        esac
+    done < <(git status --porcelain 2>/dev/null)
+    
+    # Remove duplicates and show unique symbols
+    symbols=$(echo -n "$symbols" | grep -o . | sort -u | tr -d '\n')
+    
+    echo ":$branch${symbols:+ $symbols}"
+}
+
+export PS1='on \[\e[34m\]\W\[\e[0m\] \[\e[32m\]$(git_branch_display)\[\e[0m\]\n\$ '
+
