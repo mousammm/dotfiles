@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # dmenu ffmpeg yt-dll xclip
+# sudo pacman -S yt-dlp
 # url=$(echo "" | dmenu -p "Enter your text:")
 
 MUSIC_DIR="$HOME/Music"
