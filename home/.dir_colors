@@ -1,0 +1,27 @@
+# Directory
+DIR 01;32  # bright blue
+
+# Symlink
+LINK 01;36  # bright cyan
+
+# Executable
+EXEC 01;32  # bright green
+
+# Archives
+.tar 01;31
+.gz 01;31
+.zip 01;31
+
+# Images
+.jpg 00;35
+.png 00;35
+.gif 00;35
+
+# Audio/video
+.mp3 00;36
+.mp4 00;36
+
+# Code files
+.py 00;33
+.js 00;33
+.sh 00;33

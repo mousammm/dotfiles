@@ -29,3 +29,4 @@ alias kk="source \"\$KITTY_CP\""
 alias kk="\"\$KITTY_CP\""
 
 eval "$(fzf --bash)"
+eval "$(dircolors -b ~/.dir_colors)"
