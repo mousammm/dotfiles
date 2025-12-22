@@ -22,6 +22,8 @@ hyprland/stow (before stow mkdir .config)
 # extras
 qemu-full
 python
+man/less/tree
+man-db/man-pages/glibc/man-pages-posix
 
 
 #####################
