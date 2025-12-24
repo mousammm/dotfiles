@@ -7,7 +7,7 @@ return
     -- NOTE: you do not need to call setup if you don't want to.
     require("vague").setup({
       -- optional configuration here
-       transparent = false, -- don't set background
+       transparent = true, -- don't set background
     })
     vim.cmd("colorscheme vague")
   end

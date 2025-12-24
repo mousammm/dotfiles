@@ -10,7 +10,7 @@ wl-clipboard
 
 openssh
 git 
-gvim
+nvim
 fzf
 wget/curl
 
