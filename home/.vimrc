@@ -49,10 +49,11 @@ nnoremap <leader>r :Run
 
 set wildmenu
 
-source ~/.vim-plug/vinegar/vinegar.vim
-source ~/.vim-plug/comment.vim
-source ~/.vim-plug/pacum.vim
-source ~/.vim-plug/cfix.vim
+source ~/.vim/vinegar/vinegar.vim
+source ~/.vim/comment.vim
+"source ~/.vim/pacum.vim
+source ~/.vim/lantus.vim
+source ~/.vim/cfix.vim
 
 nnoremap <C-w>h <C-w>h
 nnoremap <C-w>j <C-w>j
