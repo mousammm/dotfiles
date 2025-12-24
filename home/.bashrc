@@ -15,6 +15,7 @@ bind 'set show-all-if-ambiguous on'
 # C^R  to reverse search history 
 
 # ALIAS
+alias vim='nvim'
 alias ls='ls --color=tty'
 alias l='ls -l'
 alias ll='ls -lSah --group-directories-first'

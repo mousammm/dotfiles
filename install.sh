@@ -6,6 +6,7 @@ os-prober
 # main
 ttf-jetbrains-mono-nerd
 ttf-dejavu
+wl-clipboard
 
 openssh
 git 
