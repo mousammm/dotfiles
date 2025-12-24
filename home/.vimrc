@@ -49,7 +49,7 @@ nnoremap <leader>r :Run
 
 set wildmenu
 
-source ~/.vim/vinegar/vinegar.vim
+"source ~/.vim/vinegar/vinegar.vim
 source ~/.vim/comment.vim
 "source ~/.vim/pacum.vim
 source ~/.vim/lantus.vim
@@ -71,3 +71,8 @@ nnoremap <leader>co :copen<CR>
 nnoremap <leader>cc :cclose<CR>
 nnoremap <leader>cn :cnext<CR>
 nnoremap <leader>cp :cprevious<CR>
+
+
+call plug#begin('~/.vim/plugged')
+Plug 'stevearc/oil.nvim'
+call plug#end()
