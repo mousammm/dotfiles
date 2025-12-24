@@ -10,4 +10,5 @@
 
 [alias]
   co = checkout 
+  cm = commit -m
   ol = log --oneline --graph
