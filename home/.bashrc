@@ -22,8 +22,8 @@ alias ll='ls -lSah --group-directories-first'
 alias gaa='git add . && git commit -a'
 
 # ENV VARIABLES
-export EDITOR=vim
-export VISUAL=vim
+export EDITOR=nvim
+export VISUAL=nvim
 
 source ~/.bash_prompt
 eval "$(fzf --bash)"
