@@ -1,10 +1,5 @@
 set t_Co=256
-set background=dark
 
-" Force proper cursor colors
-highlight Cursor guifg=black guibg=white
-highlight lCursor guifg=black guibg=white
-highlight CursorIM guifg=black guibg=white
 " set beep off
 set noerrorbells
 set visualbell
@@ -72,7 +67,10 @@ nnoremap <leader>cc :cclose<CR>
 nnoremap <leader>cn :cnext<CR>
 nnoremap <leader>cp :cprevious<CR>
 
-
 call plug#begin('~/.vim/plugged')
-Plug 'stevearc/oil.nvim'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'tpope/vim-vinegar'
 call plug#end()
+
+set background=dark
+colorscheme PaperColor
