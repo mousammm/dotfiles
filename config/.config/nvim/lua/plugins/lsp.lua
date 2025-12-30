@@ -3,7 +3,11 @@ return {
   dependencies = { 'saghen/blink.cmp' },
   config = function()
     local capabilities = require('blink.cmp').get_lsp_capabilities()
-    require('lspconfig').clangd.setup({ capabilities = capabilities })
+    local servers = { 'clangd', 'marksman' }
+    
+    for _, server in ipairs(servers) do
+      require('lspconfig')[server].setup({ capabilities = capabilities })
+    end
   end
 }
 -- help lspconfig-all
