@@ -11,7 +11,7 @@ wl-clipboard
 openssh
 git 
 nvim
-fzf
+fzf/ripgrep
 wget/curl
 
 kitty
