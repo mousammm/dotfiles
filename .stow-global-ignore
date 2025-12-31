@@ -1,0 +1,6 @@
+.stow-global-ignore
+.git/
+asset/
+scripts/
+README.md
+install.sh
