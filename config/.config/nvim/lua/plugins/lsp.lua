@@ -8,11 +8,7 @@ return {
     -- for _, server in ipairs(servers) do
     --   require('lspconfig')[server].setup({ capabilities = capabilities })
     -- end
-    require('lspconfig').clangd.setup({
-      cmd = { "clangd", "--background-index", "--compile-commands-dir=." },
-      filetypes = { "c", "cpp", "objc", "objcpp" },
-    })
-    -- vim.lsp.enable('clangd')
+    vim.lsp.enable('clangd')
     vim.lsp.enable('marksman')
 
   end,
