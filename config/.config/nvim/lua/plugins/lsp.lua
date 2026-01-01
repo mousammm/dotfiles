@@ -10,7 +10,7 @@ return {
     -- end
     vim.lsp.enable('clangd')
     vim.lsp.enable('marksman')
-
+    vim.diagnostic.config({ signs = false })
   end,
 }
 -- help lspconfig-all

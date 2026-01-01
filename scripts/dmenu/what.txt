@@ -1,9 +1,0 @@
-ALSA 		default audio in linux 
-pulseaudio	works on top of ALSA
-
-mpd		backend lib mgmnt lib plalist actually playing the audio
-mpc 		forward backward etc 
-ncmpcpp 	freontend
-
-mpd is a daemon so in .xinitrc
-sudo apt install mpd ncmpcpp mpc pulseaudio pulseaudio-utils
