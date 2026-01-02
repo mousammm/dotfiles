@@ -1,4 +1,4 @@
-# Lightweight dotfiles
+# dots
 
-![Setup PNG](asset/dev.png)
+
 
