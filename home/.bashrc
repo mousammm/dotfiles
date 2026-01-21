@@ -6,12 +6,10 @@ HISTFILESIZE=10000
 HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S "
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
-
 set -o vi	# enables vi in bash prompt
 bind 'set completion-ignore-case on'
 bind 'set show-all-if-ambiguous on'
 
-# tips
 # C^R  to reverse search history 
 
 # ALIAS
