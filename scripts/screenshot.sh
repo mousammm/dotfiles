@@ -15,5 +15,5 @@ fi
 sudo pacman -S grim slurp --needed
 
 screenshot=$(scrot $SCRT_DIR/%Y-%m-%d-%T-scrt.png)
-# echo "scrnt saved at $SCRT_DIR/"
-notify-send "SCREENSHOT SAVED" "$SCRT_DIR/"
+echo "scrnt saved at $SCRT_DIR/"
+# notify-send "SCREENSHOT SAVED" "$SCRT_DIR/"

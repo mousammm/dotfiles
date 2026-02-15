@@ -4,7 +4,7 @@ local map = vim.keymap.set
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
 map('n', '<Esc>', '<cmd>nohlsearch<CR>')
-map('n', '<C-a>',  'ggVG' )
+map('n', '<leader>aa',  'ggVG' )
 
 --  See `:help wincmd` for a list of all window commands
 map('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
