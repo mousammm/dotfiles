@@ -16,6 +16,7 @@ alias ls='ls --color=auto'
 alias l='ls -l'
 alias ll='ls -lSah --group-directories-first'
 alias gaa='git add . && git commit -a'
+alias gss='git status'
 
 # export
 export EDITOR=nvim

@@ -16,7 +16,7 @@ return
         comment = "#606079",
         builtin = "#b4d4cf",
         func = "#c48282",
-        string = "#eeeeee", -- characters
+        string = "#dedede", -- characters
         number = "#e0a363",
         property = "#c3c3d5",
         constant = "#aeaed1",
