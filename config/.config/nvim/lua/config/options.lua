@@ -4,8 +4,6 @@ vim.o.relativenumber = true
 
 vim.opt.cursorline = true
 vim.opt.cursorlineopt = 'number'  
--- vim.o.cursorlineopt ='both' -- to enable cursorline!
-
 vim.opt.clipboard = 'unnamedplus'  -- Use system clipboard
 
 vim.o.wrap = false
