@@ -29,20 +29,6 @@ man-db/man-pages/glibc/man-pages-posix
 
 #####################
 
-yazi/nnn 		:file mgr
-ffmpeg 		:video audio
-mpv 			:vieo player 
-sxiv			:img viewer
-xclip 		:copy to sys clip board 
-tmux 
-fastfetch
-ntfs-3g 		:mount windows part to linux
-
-ngrok	
-tmux
-croc	
-zathura 	
-
 GIMP:img editing
 darktable:img
 kadenlive:

@@ -1,3 +1,9 @@
+# zsh
+- brew install zsh / sudo pacman -S zsh 
+- chsh mousam
+- /bin/zsh
+- reboot
+
 # GIT
 - Install git 
 - Login github on browser 
