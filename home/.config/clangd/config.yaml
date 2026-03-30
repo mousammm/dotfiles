@@ -1,3 +1,7 @@
 # for c/cpp lsp
 CompileFlags:
-  Add: [-Iincludes, -Isrc/Iincludes]
+  Add: [
+    -Iinclude,
+    -Iincludes,
+    -Isrc/Iincludes
+  ]
