@@ -52,18 +52,16 @@ $ w (write and exit)
 & Automatic timezone > Yes
 INSTALL
 
-#4 chroot in newly created installition
+# grub os-prober
+	sudo pacman -S grub efibootmgr
+	sudo grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
+	sudo grub-mkconfig -o /boot/grub/grub.cfg
+	
+	sudo pacman -S os-prober
+	sudo nano /etc/default/grub
+	GRUB_DISABLE_OS_PROBER=false # add
 
-$ efibootmgr
-$ grub-install --target=x86_64-efi --efi-directory=/boot --recheck 
-BIOS > SET > GRUB[1]
-$ pacman -S os-prober  
-$ vim /etc/default/grub
-UNCOMMENT: GRUB_DISABLE_OS_PROBER=false
-$ os-prober (found windows)
-$ grub-mkconfig -o /boot/grub/grub.cfg  (create a new grub config)
-
-## Arch auto install
-
-# From a running Arch system
-$ archinstall --config my_config.json --creds my_creds.json
+	# Run os-prober to find Windows
+	sudo os-prober
+	# Regenerate GRUB config
+	sudo grub-mkconfig -o /boot/grub/grub.cfg

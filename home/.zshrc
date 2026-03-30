@@ -1,16 +1,13 @@
 HISTSIZE=5000
 SAVEHIST=$HISTSIZE
-HISTDUP=erase # no duplicate line 
 HISTFILE=~/.zsh_history
 setopt appendhistory
-setopt sharehistory
-setopt hist_ignore_space # ignore cmd with prefix (space)
-setopt hist_ignore_all_dups
-setopt hist_save_no_dups
-setopt hist_ignore_dups
-setopt hist_find_no_dups
+setopt SHARE_HISTORY
+setopt HIST_IGNORE_SPACE
+setopt HIST_IGNORE_DUPS
 
 # alias
+alias v='nvim'
 alias vim='nvim'
 alias ls='ls --color=auto'
 alias l='ls -l'
@@ -34,5 +31,6 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 bindkey -v
 export KEYTIMEOUT=1
 
-PROMPT='%n@%m %# ' # promt 
+PROMPT=$'[%n@%m] %2~ \n$ ' # promt 
+
 eval "$(fzf --zsh)" # fzf integration
