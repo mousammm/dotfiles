@@ -54,11 +54,12 @@ local builtin = require('telescope.builtin')
 map('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
 map('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
 map('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
-vim.keymap.set('n', '<leader>b', function()
+
+map('n', '<leader>b', function()
     require('telescope.builtin').builtin()
 end, { desc = 'Telescope: Show builtin pickers' })
 
-vim.keymap.set('n', '<leader>fd', function()
+map('n', '<leader>fd', function()
     require('telescope.builtin').find_files({
       cwd = "~/dotfiles",
       hidden = true,
