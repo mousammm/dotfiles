@@ -1,6 +1,6 @@
 vim.g.have_nerd_font = true
-vim.wo.number = true
-vim.o.relativenumber = true
+vim.wo.number = false
+vim.o.relativenumber = false
 
 vim.opt.cursorline = true
 vim.opt.cursorlineopt = 'number'  
