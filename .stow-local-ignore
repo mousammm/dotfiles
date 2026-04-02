@@ -1,4 +1,5 @@
 \.git
-asset
-.gitignore
-README.md
+\.gitignore
+
+^asset$
+^README\.md$
