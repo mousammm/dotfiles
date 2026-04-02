@@ -1,2 +1,4 @@
-.git/
-asset/
+\.git
+asset
+.gitignore
+README.md
