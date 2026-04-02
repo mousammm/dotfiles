@@ -15,7 +15,7 @@ return {
     },
   },
   -- help ins-completion
-
+  
   {
     "neovim/nvim-lspconfig",
     dependencies = { 'saghen/blink.cmp' },
