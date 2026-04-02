@@ -31,6 +31,7 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 bindkey -v
 export KEYTIMEOUT=1
 
-PROMPT=$'[%n@%m] %2~ \n$ ' # promt 
+# PROMPT=$'[%n@%m] %2~ \n$ ' # name + directory
+PROMPT=$'%2~ \n$ ' # only directory show prompt
 
 eval "$(fzf --zsh)" # fzf integration
