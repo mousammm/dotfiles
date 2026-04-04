@@ -1,13 +1,12 @@
 HISTSIZE=5000
 SAVEHIST=$HISTSIZE
-HISTFILE=~/.zsh_history
+HISTFILE=~/.cache/.zsh_history
 setopt appendhistory
 setopt SHARE_HISTORY
 setopt HIST_IGNORE_SPACE
 setopt HIST_IGNORE_DUPS
 
 # alias
-alias v='nvim'
 alias vim='nvim'
 alias ls='ls --color=auto'
 alias l='ls -l'
