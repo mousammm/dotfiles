@@ -35,8 +35,3 @@ vim.o.shiftwidth = 4
 vim.o.tabstop = 4
 vim.o.softtabstop = 4
 vim.o.expandtab = true
-
-vim.opt.conceallevel = 0
-vim.api.nvim_set_hl(0, 'HelpBar', { link = 'Normal' })
-vim.api.nvim_set_hl(0, 'HelpStar', { link = 'Normal' })
-
