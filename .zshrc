@@ -18,6 +18,7 @@ alias gss='git status'
 # export
 export EDITOR=nvim
 export VISUAL=nvim
+export LESS="--incsearch" # incremental search
 
 # searching history cmd | c^r (fzf)
 bindkey '^j' history-search-forward # search forward

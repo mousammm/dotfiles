@@ -17,5 +17,9 @@ map('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 map('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 map('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
--- map("n", "<leader>rl", ":Lazy reload<CR>", 
---               { desc = "Reload Lazy and plugins" })
+-- <leader>q will put all current buffer diagnostics into the quickfix list
+map('n', '<leader>q', vim.diagnostic.setqflist, { desc = 'Open diagnostics list' })
+-- vim.diagnostic.setloclist()
+
+map('n', '<leader>sh', 'i#!/bin/bash<Esc>o<CR>echo ""<Esc>i', { desc = "Insert bash boilerplate" })
+map('n', '<leader>x', '<cmd>!chmod +x %<CR>', { desc = "Make script executable" })
