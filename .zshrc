@@ -14,6 +14,9 @@ alias ll='ls -lSah --group-directories-first'
 alias gaa='git add . && git commit -a'
 alias gss='git status'
 
+alias szsh='source ~/.zshrc'
+alias vimzsh='vim ~/.zshrc'
+
 # export
 export EDITOR=nvim
 export VISUAL=nvim
@@ -31,6 +34,6 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 bindkey -v
 export KEYTIMEOUT=1
 
-PROMPT=$'[%n@%m %2~] \n^ ' 
+PROMPT=$'[%n@%m %2~] \n$ ' 
 
 eval "$(fzf --zsh)" # fzf integration
