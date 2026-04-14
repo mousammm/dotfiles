@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# required wget tar 
+# remove nvim from pkg manager 
+
 set -e
 
 NVIM_VERSION="0.12.1"
