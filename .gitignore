@@ -1,2 +1,6 @@
+# git rm --cached <filename>
+# git rm -r --cached <folder_name>
+
 lazy-lock.json
 nvim-pack-lock.json
+

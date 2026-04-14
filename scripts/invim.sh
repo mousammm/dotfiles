@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# required wget tar 
+# required wget tar mv ln
 # remove nvim from pkg manager 
 
 set -e

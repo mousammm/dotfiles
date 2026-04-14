@@ -1,19 +1,11 @@
-return 
-{
-  { 'christoomey/vim-tmux-navigator', },
-  { 'tpope/vim-sleuth', },
-  { 'tpope/vim-fugitive', },
-  { 'tpope/vim-rhubarb', },
+vim.pack.add({
+    'https://github.com/christoomey/vim-tmux-navigator',
+    'https://github.com/tpope/vim-sleuth',
+    'https://github.com/tpope/vim-fugitive',
+    'https://github.com/tpope/vim-rhubarb',
+    'https://github.com/norcalli/nvim-colorizer.lua',
+    'https://github.com/lukas-reineke/indent-blankline.nvim',
+})
 
-  {
-    'norcalli/nvim-colorizer.lua',
-    config = function() require('colorizer').setup() end,
-  },
-
-  -- { 
-  --   "lukas-reineke/indent-blankline.nvim",
-  --   main = "ibl", opts = {},
-  -- },
-
-}
-
+require('colorizer').setup()
+require('ibl').setup()
