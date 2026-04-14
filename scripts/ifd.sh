@@ -5,9 +5,9 @@
 
 set -e
 
-FD_VERSION="0.12.1"
-FD_FILE="fd-v10.4.2-x86_64-unknown-linux-gnu.tar.gz"
-FD_DIR="fd-v10.4.2-x86_64-unknown-linux-gnu"
+FD_VERSION="10.4.2"
+FD_FILE="fd-v${FD_VERSION}-x86_64-unknown-linux-gnu.tar.gz"
+FD_DIR="fd-v${FD_VERSION}-x86_64-unknown-linux-gnu"
 DOWNLOAD_URL="https://github.com/sharkdp/fd/releases/download/v${FD_VERSION}/${FD_FILE}"
 
 # Download 
