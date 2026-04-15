@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # wget tar mv ln
-set -e
 
+set -e
 NAME="yazi"
 LOC="/usr/local"
 
