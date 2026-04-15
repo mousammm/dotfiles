@@ -9,7 +9,7 @@ LOC="/usr/local"
 sudo rm -f ${LOC}/bin/${NAME}      # binary
 
 VERSION="0.71.0"
-FILE="fzf-0.71.0-linux_amd64.tar.gz"
+FILE="tmuz-${VERSION}-linux_amd64.tar.gz"
 DOWNLOAD_URL="https://github.com/junegunn/fzf/releases/download/v${VERSION}/${FILE}"
 
 # Download 
