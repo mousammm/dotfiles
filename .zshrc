@@ -14,9 +14,6 @@ alias ll='ls -lSah --group-directories-first'
 alias gaa='git add . && git commit -a'
 alias gss='git status'
 
-alias szsh='source ~/.zshrc'
-alias vimzsh='vim ~/.zshrc'
-
 # export
 export EDITOR=nvim
 export VISUAL=nvim

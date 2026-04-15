@@ -13,7 +13,6 @@ vim.defer_fn(function()
         "clangd",
         "marksman",
         "bash",
-        "lua-ls",
       },
       automatic_installation = true,
     })
@@ -23,7 +22,6 @@ vim.defer_fn(function()
     vim.lsp.enable('clangd')
     vim.lsp.enable('marksman')
     vim.lsp.enable('bash')
-    vim.lsp.enable('lua-ls')
     
     -- DIAGONSTICS
     vim.diagnostic.config({ 
