@@ -11,4 +11,5 @@
 - openssh/git 
 - wget/curl
 
+Void,alpine,lfs,artix
 
