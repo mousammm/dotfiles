@@ -31,6 +31,7 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 bindkey -v
 export KEYTIMEOUT=1
 
-PROMPT=$'[%n@%m %2~] \n$ ' 
+#PROMPT=$'[%n@%m %2~] \n$ ' 
+PROMPT=$'[%~] \n$ ' 
 
 eval "$(fzf --zsh)" # fzf integration
