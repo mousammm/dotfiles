@@ -1,47 +1,52 @@
-vim.pack.add({
-    'https://github.com/rafamadriz/friendly-snippets',
-    'https://github.com/saghen/blink.cmp',
-
-    'https://github.com/williamboman/mason.nvim',
-    'https://github.com/neovim/nvim-lspconfig',
-})
-
-vim.defer_fn(function()
-
-    require("mason").setup({
+return {
+  {
+    'saghen/blink.cmp',
+    dependencies = { 'rafamadriz/friendly-snippets' },
+    version = '1.*',
+  
+    opts = {
+      keymap = { preset = 'default', },
+      appearance = { nerd_font_variant = 'mono' },
+      completion = { documentation = { auto_show = true } },
+  
+      sources = {
+        default = { 'lsp', 'path', 'snippets', 'buffer' },
+      },
+    },
+  },
+  -- help ins-completion
+  
+  {
+    "neovim/nvim-lspconfig",
+    dependencies = { 'saghen/blink.cmp' },
+    config = function()
+      local capabilities = require('blink.cmp').get_lsp_capabilities()
+      local servers = { 'clangd', 'marksman' , 'bash' }
+      
+      vim.lsp.enable('clangd')
+      vim.lsp.enable('marksman')
+      vim.lsp.enable('bash')
+      vim.diagnostic.config({ 
+        signs = false,
+        virtual_text = true,
+        underline = true,
+     })
+    end,
+  },
+  
+  {
+    "williamboman/mason.nvim",
+    opts = {
       ensure_installed = {
         "clangd",
         "marksman",
         "bash",
       },
       automatic_installation = true,
-    })
-    
-    local capabilities = require('blink.cmp').get_lsp_capabilities()
-    
-    vim.lsp.enable('clangd')
-    vim.lsp.enable('marksman')
-    vim.lsp.enable('bash')
-    
-    -- DIAGONSTICS
-    vim.diagnostic.config({ 
-        signs = false,
-        virtual_text = true,
-        underline = true,
-    })
-      
-    -- BLINK.cmp
-    require('blink.cmp').setup({
-        keymap = { preset = 'default' },
-        appearance = { nerd_font_variant = 'mono' },
-        completion = { documentation = { auto_show = true } },
-        sources = {
-            default = { 'lsp', 'path', 'snippets', 'buffer' },
-        },
+    },
+    config = function(_, opts)
+      require("mason").setup(opts)
+    end
+  },
 
-        fuzzy = {
-          implementation = "lua"
-        },
-    })
-
-end, 0)
+}
