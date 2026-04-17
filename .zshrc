@@ -33,5 +33,5 @@ export KEYTIMEOUT=1
 
 #PROMPT=$'[%n@%m %2~] \n$ ' 
 PROMPT=$'[%~] \n$ ' 
-
+stty -ixon # C-s get by hitting twice from tmux
 eval "$(fzf --zsh)" # fzf integration
