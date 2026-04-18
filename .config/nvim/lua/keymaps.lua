@@ -23,5 +23,5 @@ map('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 map('n', '<leader>q', vim.diagnostic.setqflist, { desc = 'Open diagnostics list' })
 -- vim.diagnostic.setloclist()
 
-map('n', '<leader>sh', 'i#!/bin/bash<Esc>o<CR>echo ""<Esc>i', { desc = "Insert bash boilerplate" })
+map('n', '<leader>sh', 'i#!/usr/bin/env bash<Esc>o<CR>echo ""<Esc>i', { desc = "Insert bash boilerplate" })
 map('n', '<leader>x', '<cmd>!chmod +x %<CR>', { desc = "Make script executable" })
