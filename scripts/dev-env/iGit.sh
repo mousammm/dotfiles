@@ -18,7 +18,7 @@ if [[ -f ~/.ssh/id_ed25519 ]]; then
 fi
 
 read -p "git name: " gitName
-read -p "git email: " gitEmail
+read -p "git email(mxmdia): " gitEmail
 
 if [[ -z "$gitName" || -z "$gitEmail" ]]; then 
     echo "Err: Name and Email must be set"
