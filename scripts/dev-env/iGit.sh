@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 set -e # exit on error
 
 if command -v git >/dev/null 2>&1; then 
@@ -34,6 +35,7 @@ git config --global init.defaultBranch main
 git config --global core.editor "vim"
 
 echo -e "Generating SSH key (ed25519)..."
+echo "ssh-agent need for phrh."
 ssh-keygen -t ed25519 -C "${gitEmail}" -N "" 2>/dev/null
 
 SSHKEY=$(cat ~/.ssh/id_ed25519.pub | cut -d " " -f 2)
