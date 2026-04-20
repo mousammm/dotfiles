@@ -66,3 +66,10 @@ return {
   },
   
 }
+
+-- ~/.config/clangd/config.yaml
+-- CompileFlags:
+--   Add: [
+--     -Iincludes,
+--     -Isrc/Iincludes
+--   ]
