@@ -1,6 +1,0 @@
-\.git
-\.gitignore
-
-^asset$
-^scripts$
-^README\.md$
