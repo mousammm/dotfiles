@@ -2,38 +2,42 @@
 
 DOT_DIR="$HOME/dotfiles"
 BAK_DIR="$HOME/.cache/dotfiles.bak"
+FILES=(".bashrc" ".inputrc" ".zshrc" ".tmux.conf")
+FOLDERS=("nvim" "kitty" "yazi" "hypr")
 
-if [[ "$1" == "R" ]]; then 
-    echo "Restoring dotfiles..."
+if [ "$1" == "R" ]; then
+    echo "Uninstalling..."
+    # Remove symlinks
+    for f in "${FILES[@]}"; do rm -f "$HOME/$f"; done
+    stow -d "$DOT_DIR" -t "$HOME/.config" -D .config 2>/dev/null
 
-    rm -f ~/.bashrc ~/.inputrc ~/.zshrc ~/.tmux.conf
+    # Restore backups
+    if [ -d "$BAK_DIR" ]; then
+        mv "$BAK_DIR"/.* "$HOME/" 2>/dev/null
+        mv "$BAK_DIR"/* "$HOME/.config/" 2>/dev/null
+        rm -rf "$BAK_DIR"
+    fi
 
-    [ -f "$BAK_DIR/.bashrc" ] && mv "$BAK_DIR/.bashrc" ~/
-    [ -f "$BAK_DIR/.inputrc" ] && mv "$BAK_DIR/.inputrc" ~/
-    [ -f "$BAK_DIR/.zshrc" ] && mv "$BAK_DIR/.zshrc" ~/
-    [ -f "$BAK_DIR/.tmux.conf" ] && mv "$BAK_DIR/.tmux.conf" ~/
-
-    rm -rf "$BAK_DIR"
     echo "done!"
 else
-    echo "Installing dots..."
-
+    echo "Installing..."
     mkdir -p "$BAK_DIR"
-    for file in .bashrc .inputrc .zshrc .tmux.conf; do
-        [ -f "$HOME/$file" ] && [ ! -L "$HOME/$file" ] && mv "$HOME/$file" "$BAK_DIR/"
+
+    # Backup and Link Files
+    for f in "${FILES[@]}"; do
+        [ -e "$HOME/$f" ] && [ ! -L "$HOME/$f" ] && mv "$HOME/$f" "$BAK_DIR/"
+        ln -sf "$DOT_DIR/$f" "$HOME/$f"
     done
 
-    ln -sf "$DOT_DIR/.bashrc" ~/.bashrc
-    ln -sf "$DOT_DIR/.inputrc" ~/.inputrc
-    ln -sf "$DOT_DIR/.zshrc" ~/.zshrc
-    ln -sf "$DOT_DIR/.tmux.conf" ~/.tmux.conf
+    # Backup and Stow Configs
+    mkdir -p ~/.config
+    for d in "${FOLDERS[@]}"; do
+        [ -d "$HOME/.config/$d" ] && [ ! -L "$HOME/.config/$d" ] && mv "$HOME/.config/$d" "$BAK_DIR/"
+    done
+    stow -d "$DOT_DIR" -t "$HOME/.config" .config
 
     echo "done!"
 fi
 
-# .config/
-#     clangd/
-#     hypr/
-#     kitty/
-#     nvim/
-#     yazi/
+# stow -d ~/dotfiles/ -t ~/.config/ .config/ # stow
+# stow -d ~/dotfiles/ -t ~/.config/ -D .config/ # unstow
