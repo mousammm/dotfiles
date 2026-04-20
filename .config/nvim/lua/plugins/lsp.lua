@@ -17,6 +17,21 @@ return {
   -- help ins-completion
   
   {
+    "williamboman/mason.nvim",
+    opts = {
+      ensure_installed = {
+        "clangd",
+        "marksman",
+        "bash",
+      },
+      automatic_installation = true,
+    },
+    config = function(_, opts)
+      require("mason").setup(opts)
+    end
+  },
+
+  {
     "neovim/nvim-lspconfig",
     dependencies = { 'saghen/blink.cmp' },
     config = function()
@@ -34,19 +49,5 @@ return {
     end,
   },
   
-  {
-    "williamboman/mason.nvim",
-    opts = {
-      ensure_installed = {
-        "clangd",
-        "marksman",
-        "bash",
-      },
-      automatic_installation = true,
-    },
-    config = function(_, opts)
-      require("mason").setup(opts)
-    end
-  },
 
 }
