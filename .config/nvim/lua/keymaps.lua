@@ -25,3 +25,7 @@ map('n', '<leader>q', vim.diagnostic.setqflist, { desc = 'Open diagnostics list'
 
 map('n', '<leader>sh', 'i#!/usr/bin/env bash<Esc>o<CR>echo ""<Esc>i', { desc = "Insert bash boilerplate" })
 map('n', '<leader>x', '<cmd>!chmod +x %<CR>', { desc = "Make script executable" })
+
+map('n', '<leader>cc', 'i/*  */<Esc>bhi', { desc = "c comment" })
+map('i', '<leader>cc', '/*  */<Esc>bhi', { desc = "c comment" })
+
