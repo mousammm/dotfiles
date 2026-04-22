@@ -10,6 +10,11 @@ set softtabstop=2 " when use tabs
 set tabstop=2 " when use tabs
 set smartindent
 
+set incsearch " move cursor on search 
+set hlsearch  " highlught on search
+set ignorecase " ignore case a=A
+set smartcase " A!=a
+
 set wildmenu " autocompletion after tab
 set wildoptions=pum
 set wildignore+=*.o,*.obj,*/node_modules/*.
@@ -23,6 +28,7 @@ colorscheme habamax
 
 let mapleader = " "
 nnoremap - :Ex<CR>
+nnoremap <Esc><Esc> :nohlsearch<CR>
 
 " ----------------
 " PLUGINS
