@@ -11,7 +11,7 @@ shopt -s autocd # cd without cd
 shopt -s checkwinsize # update lines and colums on resize
 
 # alias
-alias vim='nvim'
+# alias vim='nvim'
 alias ls='ls --color=auto'
 alias l='ls -l'
 alias ll='ls -lSah --group-directories-first'
@@ -22,7 +22,8 @@ alias gss='git status'
 export EDITOR=nvim
 export VISUAL=nvim
 export LESS="--incsearch" # incremental search
-export MANPAGER="nvim +Man!"
+# export MANPAGER="nvim +Man!"
+export MANPAGER="vim +MANPAGER -"
 
 # VI mode 
 set -o vi

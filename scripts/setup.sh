@@ -2,7 +2,7 @@
 
 DOT_DIR="$HOME/dotfiles"
 BAK_DIR="$HOME/.cache/dotfiles.bak"
-FILES=(".bashrc" ".bash_profile" ".inputrc" ".zshrc" ".tmux.conf")
+FILES=(".bashrc" ".bash_profile" ".inputrc" ".zshrc" ".tmux.conf" ".vimrc" )
 FOLDERS=("nvim" "kitty" "yazi" "hypr")
 
 if [ "$1" == "R" ]; then
