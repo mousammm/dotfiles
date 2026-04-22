@@ -20,7 +20,10 @@ set wildoptions=pum
 set wildignore+=*.o,*.obj,*/node_modules/*.
 
 syntax on
-colorscheme habamax
+colorscheme koehler           " pink
+colorscheme lunaperche         " grey
+" colorscheme pablo " greeen
+" colorscheme wildcharm " light blue
 
 " ----------------
 " KEYMAPS
@@ -29,6 +32,9 @@ colorscheme habamax
 let mapleader = " "
 nnoremap - :Ex<CR>
 nnoremap <Esc><Esc> :nohlsearch<CR>
+nnoremap ; :
+nnoremap <leader>cc i/*  */<Esc>bhi
+inoremap <leader>cc <Esc>i/*  */<Esc>bhi
 
 " ----------------
 " PLUGINS

@@ -1,11 +1,9 @@
-dots.... supports
+dots.... 
+
+core-utils,gcc,make
+fd,ripgrep,fzf,tmux
 
 bash & zsh
+vim & nvim 
+yazi & kitty
 
-tmux
-
-nvim 
-
-yazi
-
-kitty
