@@ -22,8 +22,8 @@ set wildignore+=*.o,*.obj,*/node_modules/*.
 syntax on
 colorscheme koehler           " pink
 colorscheme lunaperche         " grey
-" colorscheme pablo " greeen
-" colorscheme wildcharm " light blue
+colorscheme pablo " greeen
+colorscheme wildcharm " light blue
 
 " ----------------
 " KEYMAPS
@@ -33,8 +33,9 @@ let mapleader = " "
 nnoremap - :Ex<CR>
 nnoremap <Esc><Esc> :nohlsearch<CR>
 nnoremap ; :
+nnoremap <leader>aa <Esc>ggVGy
 nnoremap <leader>cc i/*  */<Esc>bhi
-inoremap <leader>cc <Esc>i/*  */<Esc>bhi
+set clipboard=unnamedplus
 
 " ----------------
 " PLUGINS
@@ -95,4 +96,3 @@ nnoremap <leader>sd :LspDocumentSymbol<CR>
 nnoremap <leader>ss :LspSwitchSourceHeader<CR>
 " LspPeekDefinition # open the function defination in a preview
 " LspPeekDeclaration # open the function defination in a preview
-
