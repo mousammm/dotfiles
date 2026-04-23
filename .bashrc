@@ -6,7 +6,7 @@ export HISTIGNORE="ls:cd:exit:pwd" # ignore it
 export HISTTIMEFORMAT="%F %T " # save history with timestamp
 export HISTFILE="/home/$USER/.cache/.bash_history"
 
-#stty -ixon # C-s and C-q disable
+stty -ixon # C-s and C-q disable
 shopt -s autocd # cd without cd
 shopt -s checkwinsize # update lines and colums on resize
 

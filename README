@@ -1,9 +1,19 @@
-dots.... 
+dotss!!!
 
-core-utils,gcc,make
-fd,ripgrep,fzf,tmux
+sudo install:[fd-ripgrep-fzf]
 
-bash & zsh
-vim & nvim 
-yazi & kitty
+sudo configure:[{
+  bash-zsh,
+  vim-nvim-tmux,
+  kitty,
+}]
 
+NOTE:
+A minimal dots, mostly defaults with few tweaks!
+
+vim: 
+  *build from source,
+   for yank sync to system clipboard
+  *install clanng for lsp
+font: 
+  *Ioskeva (install script in scripts/)

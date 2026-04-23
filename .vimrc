@@ -16,12 +16,9 @@ set ignorecase " ignore case a=A
 set smartcase " A!=a
 
 set wildmenu " autocompletion after tab
-set wildoptions=pum
-set wildignore+=*.o,*.obj,*/node_modules/*.
+set wildoptions=pum " vertical view
 
 syntax on
-colorscheme koehler           " pink
-colorscheme lunaperche         " grey
 colorscheme pablo " greeen
 colorscheme wildcharm " light blue
 
@@ -35,7 +32,7 @@ nnoremap <Esc><Esc> :nohlsearch<CR>
 nnoremap ; :
 nnoremap <leader>aa <Esc>ggVGy
 nnoremap <leader>cc i/*  */<Esc>bhi
-set clipboard=unnamedplus
+set clipboard^=unnamedplus
 
 " ----------------
 " PLUGINS
