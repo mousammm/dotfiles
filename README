@@ -1,24 +1,26 @@
 dotss!!!
 
-sudo install:[fd-ripgrep-fzf]
+:[fd-ripgrep-fzf]
 
-sudo configure:[{
+:[{
   bash-zsh,
   vim-nvim-tmux,
   kitty,
 }]
 
+USED:bash,vim,tmux
+UN_USED:zsh,nvim,kitty
+
 NOTE:
 A minimal dots, mostly defaults with few tweaks!
 
 ./scripts/setup.sh:
-  *symlink all .file and folder from .config 
+  *symlink all dot file
   *need to have in $HOME/dotfiles
 
 font: 
-  *Ioskeva (install script in scripts/)
+  *Ioskeva (./scripts/iIoskeva.sh)
 
 vim: 
   *build from source,
-   for yank sync to system clipboard
-  *install clanng for lsp
+  *need clang for c/c++
