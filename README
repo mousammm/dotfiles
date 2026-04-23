@@ -11,9 +11,14 @@ sudo configure:[{
 NOTE:
 A minimal dots, mostly defaults with few tweaks!
 
+./scripts/setup.sh:
+  *symlink all .file and folder from .config 
+  *need to have in $HOME/dotfiles
+
+font: 
+  *Ioskeva (install script in scripts/)
+
 vim: 
   *build from source,
    for yank sync to system clipboard
   *install clanng for lsp
-font: 
-  *Ioskeva (install script in scripts/)
