@@ -29,9 +29,6 @@ EDITOR=vim visudo ; [ %wheel ALL=(ALL:ALL) NOPASSWD: ALL ]
 7/ grub
 xbps-install -S grub-x86_64-efi
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id="Void"
-vim /etc/default/grub
-GRUB_DISABLE_OS_PROBER=false # add
-sudo os-prober
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 8/ gui
@@ -55,3 +52,9 @@ shutdown -r now
 11/ startttt
 echo "exec i3" >> .xinitrc
 startx
+
+12/ dual boot
+vim /etc/default/grub
+GRUB_DISABLE_OS_PROBER=false # add
+sudo os-prober
+sudo grub-mkconfig -o /boot/grub/grub.cfg
