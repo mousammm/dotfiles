@@ -38,7 +38,7 @@ echo -e "Generating SSH key (ed25519)..."
 echo "ssh-agent need for phrh."
 ssh-keygen -t ed25519 -C "${gitEmail}" -N "" 2>/dev/null
 
-SSHKEY=$(cat ~/.ssh/id_ed25519.pub | cut -d " " -f 2)
+SSHKEY=$(cat ~/.ssh/id_ed25519.pub)
 hostname=$(cat /etc/hostname)
 echo -e "\nTitle: ${hostname}-$(date +%Y%m%d)"
 echo "KEY: ${SSHKEY}"

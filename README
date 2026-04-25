@@ -1,26 +1,3 @@
 dotss!!!
 
-:[fd-ripgrep-fzf]
-
-:[{
-  bash-zsh,
-  vim-nvim-tmux,
-  kitty,
-}]
-
-USED:bash,vim,tmux
-UN_USED:zsh,nvim,kitty
-
-NOTE:
-A minimal dots, mostly defaults with few tweaks!
-
-./scripts/setup.sh:
-  *symlink all dot file
-  *need to have in $HOME/dotfiles
-
-font: 
-  *Ioskeva (./scripts/iIoskeva.sh)
-
-vim: 
-  *build from source,
-  *need clang for c/c++
+fd,ripgrep,fzf
