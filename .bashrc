@@ -19,7 +19,7 @@ alias gss='git status'
 
 # export
 export EDITOR=vim
-export VISUAL=vim
+# export VISUAL=vim
 export LESS="--incsearch" # incremental search
 export MANPAGER="vim +MANPAGER -"
 
