@@ -19,8 +19,8 @@ set wildmenu " autocompletion after tab
 set wildoptions=pum " vertical view
 
 syntax on
-colorscheme pablo " greeen
-colorscheme wildcharm " light blue
+"colorscheme wildcharm " light blue
+"colorscheme pablo " greeen
 
 " ----------------
 " KEYMAPS

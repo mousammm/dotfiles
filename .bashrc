@@ -16,6 +16,7 @@ alias l='ls -l'
 alias ll='ls -lSah --group-directories-first'
 alias gaa='git add . && git commit -a'
 alias gss='git status'
+alias xi='sudo xbps-install'
 
 # export
 export EDITOR=vim
