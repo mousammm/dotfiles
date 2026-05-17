@@ -1,0 +1,21 @@
+# tab completion
+set show-all-if-ambiguous on
+set completion-ignore-case on
+TAB: menu-complete
+
+# emacs control in vi
+$if mode=vi
+  set keymap vi-insert
+  "\C-l": clear-screen
+  "\C-j": history-search-forward
+  "\C-k": history-search-backward
+
+  set keymap vi-command
+  "\C-l": clear-screen
+  "\C-j": history-search-forward
+  "\C-k": history-search-backward
+$endif
+
+set show-mode-in-prompt on
+set vi-ins-mode-string ">"
+set vi-cmd-mode-string "#"

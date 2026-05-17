@@ -1,0 +1,11 @@
+wget,curl,unzip,tar,stow,git
+fd,ripgrep,fzf,vim,tmux
+
+font (./scripts/iFonts.sh)
+awww (./scripts/awww_change_bg.sh)
+man-pages + man
+
+openssh (git)
+pulseaudio
+wl-clipboard
+os-prober (fuse3) dual boot
