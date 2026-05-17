@@ -1,11 +1,26 @@
-wget,curl,unzip,tar,stow,git
-fd,ripgrep,fzf,vim,tmux
+TermEmu: Kitty
+editor: vim/nvim
+Multiplexer: tmux
+fileMgr: yazi
+WindowMgr: Hyprland
 
-font (./scripts/iFonts.sh)
-awww (./scripts/awww_change_bg.sh)
-man-pages + man
+SYSTEM DEPENDENCIES:
+  wget,curl,unzip,tar,stow,git
+TOOLS:
+  fd,ripgrep,fzf
 
-openssh (git)
-pulseaudio
-wl-clipboard
-os-prober (fuse3) dual boot
+FONT (./scripts/iFonts.sh)
+AWWW (./scripts/awww_change_bg.sh)
+
+NOTE:
+  - vim dosent have cliboard sync capablities by default
+  - for tmux clipboard sync 
+    mac (pbcopy)
+    linux (xclip/wl-copy)
+
+ARCH LINUX SPECIFIC:
+- openssh: needed for git to use SSH
+- pulseaudio: for audio hyprland.conf uses a macro
+- wl-clipboard: for hyprland clipboard (tmux,nvim uses)
+- os-prober,fuse3: for os-prober to find windows we need fuse3
+- man-db,man-pages,man-pages-posix: docs for api, c std lib, system kernel
