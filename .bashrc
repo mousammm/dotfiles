@@ -14,6 +14,7 @@ shopt -s checkwinsize # update lines and colums on resize
 alias ls='ls --color=auto'
 alias l='ls -l'
 alias ll='ls -lSah --group-directories-first'
+alias vim='nvim'
 
 # export
 export TERM=xterm-256color
