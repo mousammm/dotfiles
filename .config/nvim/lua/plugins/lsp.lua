@@ -1,6 +1,24 @@
 return {
 
   {
+    "saghen/blink.cmp",
+    version = "*",
+    dependencies = "rafamadriz/friendly-snippets",
+    opts = {
+      keymap = { preset = 'default' },
+
+      appearance = {
+        use_nvim_cmp_as_default = true,
+        nerd_font_variant = 'mono'
+      },
+
+      sources = {
+        default = { 'lsp', 'path', 'snippets', 'buffer' },
+      },
+    },
+  },
+
+  {
     "williamboman/mason.nvim",
     opts = {
       automatic_installation = true,
@@ -16,6 +34,8 @@ return {
     opts = {
       ensure_installed = {
         "clangd",
+        "bashls",
+        "marksman",
       },
       automatic_installation = true,
     },
@@ -29,23 +49,31 @@ return {
     dependencies = { 
       "williamboman/mason.nvim",
       "williamboman/mason-lspconfig.nvim",
+      "saghen/blink.cmp",
     },
 
     config = function()
-      vim.lsp.config("clangd", {})
-      vim.lsp.enable("clangd")
+      local capabilities = require('blink.cmp').get_lsp_capabilities()
 
-      vim.api.nvim_create_autocmd("LspAttach", {
-        callback = function(ev)
-          vim.lsp.completion.enable(true, ev.data.client_id, ev.buf, {
-            autotrigger = true,
-          })
-        end,
-      })
+      vim.lsp.config("clangd", { capabilities = capabilities })
+      vim.lsp.enable("clangd")
+      vim.lsp.config("bashls", { capabilities = capabilities })
+      vim.lsp.enable("bashls")
+      vim.lsp.config("marksman", { capabilities = capabilities })
+      vim.lsp.enable("marksman")
+
+
+      -- vim.api.nvim_create_autocmd("LspAttach", {
+      --   callback = function(ev)
+      --     vim.lsp.completion.enable(true, ev.data.client_id, ev.buf, {
+      --       autotrigger = true,
+      --     })
+      --   end,
+      -- })
 
       vim.diagnostic.config({ 
         signs = false,
-        virtual_text = false,
+        virtual_text = true,
         underline = true,
      })
     end,
