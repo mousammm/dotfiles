@@ -30,7 +30,8 @@ set keyseq-timeout 0
 GB() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
-export PS1="[\u@\h \W]\$(GB) \n "
+#export PS1="[\u@\h \W]\$(GB) \n "
+export PS1="[\u@\h \W]\$(GB)> "
 
 # fzf integration
 export FZF_DEFAULT_OPTS=$'--style=minimal

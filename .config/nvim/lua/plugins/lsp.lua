@@ -62,15 +62,6 @@ return {
       vim.lsp.config("marksman", { capabilities = capabilities })
       vim.lsp.enable("marksman")
 
-
-      -- vim.api.nvim_create_autocmd("LspAttach", {
-      --   callback = function(ev)
-      --     vim.lsp.completion.enable(true, ev.data.client_id, ev.buf, {
-      --       autotrigger = true,
-      --     })
-      --   end,
-      -- })
-
       vim.diagnostic.config({ 
         signs = false,
         virtual_text = true,
