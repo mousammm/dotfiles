@@ -17,10 +17,9 @@ return {
   },
 
   {
-    dir = "~/projects/nvim_md_prev/",
-    name = "nvim_md_prev",
-    config = function ()
-      require('nvim_md_prev')
-    end
+    dir = "~/projects/scratch.nvim",
+  },
+  {
+    dir = "~/projects/mdp.nvim",
   },
 }

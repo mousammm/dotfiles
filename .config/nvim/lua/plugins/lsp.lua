@@ -19,6 +19,16 @@ return {
   },
 
   {
+    "folke/lazydev.nvim",
+    ft = "lua",
+    opts = {
+      library = {
+        { path = "luvit-meta/library", words = { "vim%.uv" } },
+      },
+    },
+  },
+
+  {
     "williamboman/mason.nvim",
     opts = {
       automatic_installation = true,
@@ -36,6 +46,7 @@ return {
         "clangd",
         "bashls",
         "marksman",
+        "lua_ls",
       },
       automatic_installation = true,
     },
@@ -44,9 +55,9 @@ return {
     end
   },
 
-  { 
+  {
     "neovim/nvim-lspconfig",
-    dependencies = { 
+    dependencies = {
       "williamboman/mason.nvim",
       "williamboman/mason-lspconfig.nvim",
       "saghen/blink.cmp",
@@ -62,12 +73,27 @@ return {
       vim.lsp.config("marksman", { capabilities = capabilities })
       vim.lsp.enable("marksman")
 
-      vim.diagnostic.config({ 
+      vim.lsp.config("lua_ls", {
+        capabilities = capabilities,
+        settings = {
+          Lua = {
+            runtime = { version = 'LuaJIT', },
+            diagnostics = { globals = { 'vim' }, },
+            workspace = {
+              checkThirdParty = false,
+              library = vim.api.nvim_get_runtime_file("", true),
+            },
+            telemetry = { enable = false, },
+          },
+        },
+      })
+      vim.lsp.enable("lua_ls")
+
+      vim.diagnostic.config({
         signs = false,
         virtual_text = true,
         underline = true,
      })
     end,
   },
-  
 }
