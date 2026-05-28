@@ -15,6 +15,7 @@ alias ls='ls --color=auto'
 alias l='ls -l'
 alias ll='ls -lSah --group-directories-first'
 alias vim='nvim'
+alias kmg='kitten icat --align left'
 
 # export
 export TERM=xterm-256color

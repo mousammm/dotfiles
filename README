@@ -3,6 +3,7 @@ editor: vim/nvim
 Multiplexer: tmux
 fileMgr: yazi
 WindowMgr: Hyprland
+browser: firefox, (ublock + darkreader)
 
 SYSTEM DEPENDENCIES:
   wget,curl,unzip,tar,stow,git
