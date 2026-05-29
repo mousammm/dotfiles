@@ -19,7 +19,4 @@ return {
   {
     dir = "~/projects/scratch.nvim",
   },
-  {
-    dir = "~/projects/mdp.nvim",
-  },
 }

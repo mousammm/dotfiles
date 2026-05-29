@@ -22,6 +22,7 @@ export TERM=xterm-256color
 export EDITOR=vim
 export LESS="--incsearch" # incremental search
 export MANPAGER="vim -M +MANPAGER -"
+# export MANPAGER="nvim +Man!"
 
 # VI mode 
 set -o vi
@@ -32,7 +33,7 @@ GB() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 #export PS1="[\u@\h \W]\$(GB) \n "
-export PS1="[\u@\h \W]\$(GB)> "
+export PS1="[\u@\h \W]\$(GB) \n> "
 
 # fzf integration
 export FZF_DEFAULT_OPTS=$'--style=minimal
