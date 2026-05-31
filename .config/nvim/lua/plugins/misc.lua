@@ -18,5 +18,8 @@ return {
 
   {
     dir = "~/projects/scratch.nvim",
+    config = function ()
+     require("scratch").setup()
+    end
   },
 }
