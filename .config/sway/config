@@ -27,7 +27,7 @@ bindsym $mod+Shift+b exec $browser
 bindsym $mod+Shift+c reload
 
 floating_modifier $mod normal
-bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+bindsym $mod+Shift+e exec swaynag -t warning -m 'Exit sway Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
 # Move your focus around
 bindsym $mod+$left focus left
@@ -106,11 +106,12 @@ bindsym $mod+Shift+BackSpace exec grim -g "$(slurp)" - | swappy -f -
 # `man 5 sway-bar`
 bar {
   position bottom
-  status_command while date +'%Y-%m-%d %X'; do sleep 1; done
+  # status_command while date +'%Y-%m-%d %X'; do sleep 1; done
   colors {
-      statusline #ffffff
-      background #001011
-      inactive_workspace #32323200 #32323200 #5c5c5c
+    statusline #ffffff
+    # background #001011
+    background #111011
+    inactive_workspace #32323200 #32323200 #5c5c5c
   }
 }
 # client.focused #4c7899 #285577 #ffffff #2e9ef4 #285577

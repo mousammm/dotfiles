@@ -1,0 +1,18 @@
+- sway
+- Kitty
+- vim/nvim
+- tmux
+- browser: firefox, (ublock + darkreader)
+  about:config => (ui.key.menuAccessKeyFocuses)
+
+SYSTEM_DEPENDENCIES
+wget,curl,unzip,tar,stow,git
+
+TOOLS:
+  fd,ripgrep,fzf
+
+- openssh
+- pulseaudio
+- wl-clipboard
+- os-prober,fuse3: for os-prober to find other os we need fuse3
+- man-db,man-pages,man-pages-posix: docs for api, c std lib, system kernel
