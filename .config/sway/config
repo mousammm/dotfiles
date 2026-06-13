@@ -4,6 +4,9 @@
 # grim slurp wl-copy swappy (screenshot)
 # wf-recorder
 
+# sudo pacman -S pipewire-pulse
+# systemctl --user enable --now pipewire pipewire-pulse wireplumber
+
 set $mod Mod1
 set $left h
 set $down j
@@ -12,7 +15,8 @@ set $right l
 
 set $term kitty
 set $browser firefox
-font Mx437 IBM PS/55 re. 15
+# font Mx437 IBM PS/55 re. 15
+font Iosevka 15
 
 # swaymsg -t get_outputs
 output HDMI-A-1 mode 1920x1080@100Hz bg ~/dotfiles/asset/walls/witcher.jpg fill

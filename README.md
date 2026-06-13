@@ -1,9 +1,9 @@
-## dots
+## dots (wayland)
 
 - Window Manager: **SWAY**
 - Terminal Emulator: **KITTY**
 - Editor: **VIM/NVIM**
-- REQ: **fd/ripgrep/fzf**
+- REQUIRED: **fd/ripgrep/fzf**
 
 ---
 
