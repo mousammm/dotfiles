@@ -116,8 +116,8 @@ bar {
   colors {
     # General bar colors
     background #111011
-    statusline #ffffff
-    separator  #45475a
+    statusline #f5475a
+    separator  #141414
 
     # Workspace states: <border> <background> <text>
     focused_workspace  #ca9ee6 #ca9ee6 #11111b
@@ -128,9 +128,9 @@ bar {
 }
 
 # Class                 border  backgr  text    indic.  child_border
-client.focused          #141414 #2f2f2f #ffffff #ea999c #141414
+client.focused          #45475a #25272a #cdd6f4 #ea999c #45475a
 client.focused_inactive #45475a #45475a #cdd6f4 #45475a #45475a
-client.unfocused        #141424 #141414 #a4a4c6 #1e1e2e #141424
+client.unfocused        #141414 #141414 #a4a4c6 #1e1e2e #141414
 client.urgent           #e78284 #e78284 #11111b #e78284 #e78284
 
 include @sysconfdir@/sway/config.d/*
