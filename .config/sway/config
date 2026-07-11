@@ -15,7 +15,7 @@ set $right l
 
 set $term kitty
 set $browser firefox
-# font Mx437 IBM PS/55 re. 15
+
 font Iosevka 15
 
 # swaymsg -t get_outputs
@@ -111,14 +111,26 @@ bindsym $mod+Shift+BackSpace exec grim -g "$(slurp)" - | swappy -f -
 # `man 5 sway-bar`
 bar {
   position bottom
-  # status_command while date +'%Y-%m-%d %X'; do sleep 1; done
+  status_command i3status
+
   colors {
-    statusline #ffffff
-    # background #001011
+    # General bar colors
     background #111011
-    inactive_workspace #32323200 #32323200 #5c5c5c
+    statusline #ffffff
+    separator  #45475a
+
+    # Workspace states: <border> <background> <text>
+    focused_workspace  #ca9ee6 #ca9ee6 #11111b
+    active_workspace   #45475a #45475a #cdd6f4
+    inactive_workspace #1e1e2e #1e1e2e #a6adc8
+    urgent_workspace   #e78284 #e78284 #11111b
   }
 }
-# client.focused #4c7899 #285577 #ffffff #2e9ef4 #285577
+
+# Class                 border  backgr  text    indic.  child_border
+client.focused          #141414 #2f2f2f #ffffff #ea999c #141414
+client.focused_inactive #45475a #45475a #cdd6f4 #45475a #45475a
+client.unfocused        #141424 #141414 #a4a4c6 #1e1e2e #141424
+client.urgent           #e78284 #e78284 #11111b #e78284 #e78284
 
 include @sysconfdir@/sway/config.d/*
