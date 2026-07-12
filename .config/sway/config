@@ -19,7 +19,7 @@ set $browser firefox
 font Iosevka 15
 
 # swaymsg -t get_outputs
-output HDMI-A-1 mode 1920x1080@100Hz bg ~/dotfiles/asset/walls/witcher.jpg fill
+output HDMI-A-1 mode 1920x1080@100Hz bg ~/dotfiles/asset/walls/nirvana-pape.png fill
 
 input * {
     xkb_options "ctrl:swapcaps"
@@ -117,7 +117,7 @@ bar {
     # General bar colors
     background #111011
     statusline #f5475a
-    separator  #141414
+    separator  #f41414
 
     # Workspace states: <border> <background> <text>
     focused_workspace  #ca9ee6 #ca9ee6 #11111b

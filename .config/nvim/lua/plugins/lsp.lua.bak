@@ -1,10 +1,9 @@
-return {
+-- simple lsp with omni function
 
+return {
   {
     "williamboman/mason.nvim",
-    opts = {
-      automatic_installation = true,
-    },
+    opts = { automatic_installation = true, },
     config = function(_, opts)
       require("mason").setup(opts)
     end
@@ -14,9 +13,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     dependencies = { "williamboman/mason.nvim" },
     opts = {
-      ensure_installed = {
-        "clangd",
-      },
+      ensure_installed = { "clangd", },
       automatic_installation = true,
     },
     config = function(_, opts)
@@ -24,9 +21,9 @@ return {
     end
   },
 
-  { 
+  {
     "neovim/nvim-lspconfig",
-    dependencies = { 
+    dependencies = {
       "williamboman/mason.nvim",
       "williamboman/mason-lspconfig.nvim",
     },
@@ -43,12 +40,12 @@ return {
         end,
       })
 
-      vim.diagnostic.config({ 
+      vim.diagnostic.config({
         signs = false,
         virtual_text = false,
         underline = true,
      })
     end,
   },
-  
+
 }

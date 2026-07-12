@@ -33,7 +33,6 @@ GB() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 export PS1="[\u@\h \W]\$(GB) \n "
-#export PS1="[\u@\h \W]\$(GB) \n> "
 
 # fzf integration
 export FZF_DEFAULT_OPTS=$'--style=minimal
@@ -45,3 +44,7 @@ export FZF_DEFAULT_OPTS=$'--style=minimal
   --header-label-pos=15
   --color=dark'
 eval "$(fzf --bash)" 
+
+# zig 
+export PATH="$HOME/vendor/zig-x86_64-linux-0.17.0-dev.892+54537285c/:$PATH"
+export PATH="$HOME/vendor/odin-linux-amd64-nightly+2026-06-08/:$PATH"

@@ -1,18 +1,19 @@
-- sway
-- Kitty
-- vim/nvim
-- tmux
-- browser: firefox, (ublock + darkreader)
-  about:config => (ui.key.menuAccessKeyFocuses)
+sudo pacman -S xorg-server xorg-xinit xf86-video-amdgup alsa-utils pipewire-pulse ttf-dejavu
 
-SYSTEM_DEPENDENCIES
-wget,curl,unzip,tar,stow,git
+sway
+ ;; pulseaudio
 
-TOOLS:
-  fd,ripgrep,fzf
+Kitty
+firefox, (ublock + darkreader) ;; about:config => (ui.key.menuAccessKeyFocuses)
+
+tmux/vim/nvim
+  ;; wl-clipboard
+  ;; fd,ripgrep,fzf
+  ;; feh for img
+
+;; wget,curl,unzip,tar,stow,git
 
 - openssh
-- pulseaudio
-- wl-clipboard
-- os-prober,fuse3: for os-prober to find other os we need fuse3
-- man-db,man-pages,man-pages-posix: docs for api, c std lib, system kernel
+- os-prober,fuse3
+- man-db,man-pages,man-pages-posix
+- sudo pacman -S vulkan-radeon

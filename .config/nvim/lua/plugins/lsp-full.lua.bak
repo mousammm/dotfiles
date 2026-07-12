@@ -1,3 +1,4 @@
+-- full lsp with lua integration and blink support
 return {
 
   {
@@ -19,6 +20,16 @@ return {
   },
 
   {
+    "folke/lazydev.nvim",
+    ft = "lua",
+    opts = {
+      library = {
+        { path = "luvit-meta/library", words = { "vim%.uv" } },
+      },
+    },
+  },
+
+  {
     "williamboman/mason.nvim",
     opts = {
       automatic_installation = true,
@@ -34,7 +45,7 @@ return {
     opts = {
       ensure_installed = {
         "clangd",
-        "ols",
+        "lua_ls",
       },
       automatic_installation = true,
     },
@@ -54,12 +65,30 @@ return {
     config = function()
       local capabilities = require('blink.cmp').get_lsp_capabilities()
 
+      -- 01 clang lsp
       vim.lsp.config("clangd", { capabilities = capabilities })
       vim.lsp.enable("clangd")
 
-      vim.lsp.config("ols", { capabilities = capabilities })
-      vim.lsp.enable("ols")
+      -- 02 lua lsp
+      vim.lsp.config("lua_ls", {
+        capabilities = capabilities,
+        settings = {
+          Lua = {
+            runtime = { version = 'LuaJIT', },
+            diagnostics = { globals = { 'vim' }, },
+            workspace = {
+              checkThirdParty = false,
+              library = vim.api.nvim_get_runtime_file("", true),
+            },
+            telemetry = { enable = false, },
+          },
+        },
+      })
+      vim.lsp.enable("lua_ls")
 
+      -- XX rest of lsp
+
+      -- visual for lsp
       vim.diagnostic.config({
         signs = false,
         virtual_text = false,
@@ -67,5 +96,4 @@ return {
      })
     end,
   },
-
 }

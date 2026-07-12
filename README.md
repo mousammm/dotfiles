@@ -2,9 +2,9 @@
 
 - Window Manager: **SWAY**
 - Terminal Emulator: **KITTY**
-- Editor: **VIM/NVIM**
+- Editor: **NVIM**
 - REQUIRED: **fd/ripgrep/fzf**
 
 ---
 
-![img](./asset/preview.jpg)
+![img](./asset/preview.png)
