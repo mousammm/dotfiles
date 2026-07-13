@@ -3,7 +3,7 @@
 DOT_DIR="$HOME/dotfiles"
 BAK_DIR="$HOME/.cache/dotfiles.bak"
 FILES=(".bashrc" ".bash_profile" ".inputrc" ".tmux.conf" ".vimrc" )
-FOLDERS=("kitty" "nvim" "sway")
+FOLDERS=("kitty" "nvim" "sway" "i3status")
 
 if [ "$1" == "R" ]; then
     echo "Uninstalling..."
