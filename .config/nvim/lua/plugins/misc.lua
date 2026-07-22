@@ -17,9 +17,9 @@ return {
   },
 
   {
-    dir = "~/projects/scratch.nvim",
+    dir = "~/projects/billa.nvim",
     config = function ()
-     require("scratch").setup()
+     require("billa").setup()
     end
   },
 }
