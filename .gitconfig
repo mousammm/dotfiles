@@ -1,0 +1,10 @@
+[user]
+	name = mousammm
+	email = mousamssdia@gmail.com
+[init]
+	defaultBranch = main
+[core]
+	editor = vim
+	autocrlf = input
+[alias]
+	lg = log --graph --oneline
