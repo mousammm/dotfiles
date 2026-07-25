@@ -17,9 +17,10 @@ return {
   },
 
   {
-    dir = "~/projects/billa.nvim",
-    config = function ()
-     require("billa").setup()
+    "mousammm/billa.nvim",
+    config = function()
+      require("billa").setup()
     end
-  },
+  }
+
 }
