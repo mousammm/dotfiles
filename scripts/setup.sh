@@ -1,43 +1,34 @@
 #!/usr/bin/env bash
 
-DOT_DIR="$HOME/dotfiles"
-BAK_DIR="$HOME/.cache/dotfiles.bak"
-FILES=(".bashrc" ".bash_profile" ".inputrc" ".tmux.conf" ".vimrc" ".gitconfig")
-FOLDERS=("kitty" "nvim" "sway" "i3status")
-
-if [ "$1" == "R" ]; then
-    echo "Uninstalling..."
-    # Remove symlinks
-    for f in "${FILES[@]}"; do rm -f "$HOME/$f"; done
-    stow -d "$DOT_DIR" -t "$HOME/.config" -D .config 2>/dev/null
-
-    # Restore backups
-    if [ -d "$BAK_DIR" ]; then
-        mv "$BAK_DIR"/.* "$HOME/" 2>/dev/null
-        mv "$BAK_DIR"/* "$HOME/.config/" 2>/dev/null
-        rm -rf "$BAK_DIR"
-    fi
-
-    echo "done!"
-else
-    echo "Installing..."
-    mkdir -p "$BAK_DIR"
-
-    # Backup and Link Files
-    for f in "${FILES[@]}"; do
-        [ -e "$HOME/$f" ] && [ ! -L "$HOME/$f" ] && mv "$HOME/$f" "$BAK_DIR/"
-        ln -sf "$DOT_DIR/$f" "$HOME/$f"
-    done
-
-    # Backup and Stow Configs
-    mkdir -p ~/.config
-    for d in "${FOLDERS[@]}"; do
-        [ -d "$HOME/.config/$d" ] && [ ! -L "$HOME/.config/$d" ] && mv "$HOME/.config/$d" "$BAK_DIR/"
-    done
-    stow -d "$DOT_DIR" -t "$HOME/.config" .config
-
-    echo "done!"
+# check if stow is installed
+if ! command -v stow &> /dev/null; then
+    echo "Error: GNU Stow is not installed. Please install it first." >&2
+    exit 1
 fi
 
-# stow -d ~/dotfiles/ -t ~/.config/ .config/ # stow
-# stow -d ~/dotfiles/ -t ~/.config/ -D .config/ # unstow
+DOT_DIR="$HOME/dotfiles"
+FILES=(".bashrc" ".bash_profile" ".inputrc" ".tmux.conf" ".vimrc" ".gitconfig")
+
+echo "Installing SetUp..."
+
+# Link Files with verbose output
+for f in "${FILES[@]}"; do
+    echo "Linking $DOT_DIR/$f -> $HOME/$f"
+    ln -sf "$DOT_DIR/$f" "$HOME/$f"
+done
+
+# Stow .config dirs
+mkdir -p ~/.config
+stow -d "$DOT_DIR" -t "$HOME/.config" .config
+
+# list .config dir
+echo "Stowed configurations:"
+if [ -d "$DOT_DIR/.config" ]; then
+    for item in "$DOT_DIR/.config"/*; do
+        if [ -e "$item" ]; then
+            basename "$item" | sed 's/^/  - /'
+        fi
+    done
+fi
+
+echo "done!"
