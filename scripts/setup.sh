@@ -2,7 +2,7 @@
 
 DOT_DIR="$HOME/dotfiles"
 BAK_DIR="$HOME/.cache/dotfiles.bak"
-FILES=(".bashrc" ".bash_profile" ".inputrc" ".tmux.conf" ".vimrc" )
+FILES=(".bashrc" ".bash_profile" ".inputrc" ".tmux.conf" ".vimrc" ".gitconfig")
 FOLDERS=("kitty" "nvim" "sway" "i3status")
 
 if [ "$1" == "R" ]; then
