@@ -1,13 +1,13 @@
-export HISTSIZE=100000        # How many lines to keep in memory
-export HISTFILESIZE=$HISTSIZE # How many lines to keep on disk
+export HISTSIZE=100000
+export HISTFILESIZE=$HISTSIZE
 shopt -s histappend
-export HISTCONTROL=ignoreboth # ignore duplicates, cmd with space
-export HISTIGNORE="ls:cd:exit:pwd" # ignore it
-export HISTTIMEFORMAT="%F %T " # save history with timestamp
+export HISTCONTROL=ignoreboth
+export HISTIGNORE="ls:cd:exit:pwd"
+export HISTTIMEFORMAT="%F %T "
 export HISTFILE="/home/$USER/.cache/.bash_history"
 
-stty -ixon # C-s and C-q disable
-shopt -s autocd # cd without cd
+stty -ixon
+shopt -s autocd # auto cd
 shopt -s checkwinsize # update lines and colums on resize
 
 # alias
@@ -20,7 +20,7 @@ alias kkk='kitten icat --align left'
 # export
 export TERM=xterm-256color
 export EDITOR=vim
-export LESS="--incsearch" # incremental search
+export LESS="--incsearch"
 export MANPAGER="vim -M +MANPAGER -"
 # export MANPAGER="nvim +Man!"
 
@@ -48,3 +48,7 @@ eval "$(fzf --bash)"
 # zig 
 export PATH="$HOME/thirdParty/zig-x86_64-linux-0.17.0-dev.892+54537285c/:$PATH"
 export PATH="$HOME/thirdParty/odin-linux-amd64-nightly+2026-06-08/:$PATH"
+
+# Ruby Gem path configurations
+export GEM_HOME="$(ruby -e 'print Gem.user_dir')"
+export PATH="$PATH:$GEM_HOME/bin"
