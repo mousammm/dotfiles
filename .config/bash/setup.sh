@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DIR="$HOME/dotfiles/.config/test"
+DIR="$HOME/dotfiles/.config/bash"
 FILES=( ".bashrc" ".bash_profile" ".inputrc" )
 
 echo "Bash SetUp..."
