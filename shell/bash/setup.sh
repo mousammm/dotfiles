@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 
-DIR="$HOME/dotfiles/.config/bash"
+DIR="$HOME/dotfiles/shell/bash"
 FILES=( ".bashrc" ".bash_profile" ".inputrc" )
-
-echo "Bash SetUp..."
 
 for f in "${FILES[@]}"; do
     echo "Linking $DIR/$f -> $HOME/$f"

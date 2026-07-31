@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 
-DIR="$HOME/dotfiles/.config/zsh"
+DIR="$HOME/dotfiles/shell/zsh"
 FILES=( ".zprofile" ".zshrc" )
-
-echo "ZSH SetUp..."
 
 for f in "${FILES[@]}"; do
     echo "Linking $DIR/$f -> $HOME/$f"

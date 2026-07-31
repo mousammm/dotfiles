@@ -1,15 +1,19 @@
 #!/usr/bin/env bash
 
+# shell setup
+# KHELL=bash
+KHELL=zsh
+. $HOME/dotfiles/shell/$KHELL/setup.sh
+
 # check if stow is installed
 if ! command -v stow &> /dev/null; then
     echo "Error: GNU Stow is not installed. Please install it first." >&2
     exit 1
 fi
 
+# add everything except shell
 DOT_DIR="$HOME/dotfiles"
-FILES=(".zshrc" ".zprofile" ".tmux.conf" ".vimrc" ".gitconfig")
-
-echo "Installing SetUp..."
+FILES=(".tmux.conf" ".vimrc" ".gitconfig")
 
 # Link Files with verbose output
 for f in "${FILES[@]}"; do
