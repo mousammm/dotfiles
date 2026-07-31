@@ -26,6 +26,5 @@ vim.o.expandtab = true
 
 vim.o.termguicolors = true
 vim.o.background = "dark"
---vim.cmd('colorscheme retrobox')
 vim.cmd('colorscheme habamax')
 vim.api.nvim_set_hl(0, "Normal", { bg = "NONE", ctermbg = "NONE" })

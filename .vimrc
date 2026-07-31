@@ -6,18 +6,18 @@ set nocompatible " remove vi support
 
 filetype plugin indent on
 set expandtab " tab to spaces
-set shiftwidth=2 " >> or <<
-set softtabstop=2 " when use tabs
-set tabstop=2 " when use tabs
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
 set smartindent
 
-set incsearch " move cursor on search 
-set hlsearch  " highlught on search
-set ignorecase " ignore case a=A
-set smartcase " A!=a
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
 
-set wildmenu " autocompletion after tab
-set wildoptions=pum " vertical view
+set wildmenu
+set wildoptions=pum
 
 syntax on
 colorscheme default

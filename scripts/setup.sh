@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-# shell setup
 # KHELL=bash
 KHELL=zsh
 . $HOME/dotfiles/shell/$KHELL/setup.sh
@@ -34,5 +33,3 @@ if [ -d "$DOT_DIR/.config" ]; then
         fi
     done
 fi
-
-echo "done!"
