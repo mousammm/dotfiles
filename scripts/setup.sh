@@ -7,7 +7,7 @@ if ! command -v stow &> /dev/null; then
 fi
 
 DOT_DIR="$HOME/dotfiles"
-FILES=(".bashrc" ".bash_profile" ".inputrc" ".tmux.conf" ".vimrc" ".gitconfig")
+FILES=(".zshrc" ".zprofile" ".tmux.conf" ".vimrc" ".gitconfig")
 
 echo "Installing SetUp..."
 
