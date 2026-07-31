@@ -5,6 +5,7 @@ local map = vim.keymap.set
 map('n', ';',  ':' )
 map('n', '<Esc>', '<cmd>nohlsearch<CR>')
 map('n', '-',  ':Ex<CR>' )
+map('n', ':', ':<C-f>i')
 
 -- lsp
 map('n', '<leader>q', vim.diagnostic.setqflist, { desc = 'Open diagnostics list' })
