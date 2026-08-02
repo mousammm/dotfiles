@@ -1,9 +1,7 @@
-# tab completion
 set show-all-if-ambiguous on
 set completion-ignore-case on
 TAB: menu-complete
 
-# emacs control in vi
 $if mode=vi
   set keymap vi-insert
   "\C-l": clear-screen
