@@ -18,4 +18,4 @@ export MANPAGER="vim -M +MANPAGER -"
 
 set -o vi
 set keyseq-timeout 0
-export PS1="[\u@\h \W] \n "
+export PS1="\w \n "

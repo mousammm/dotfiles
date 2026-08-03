@@ -33,6 +33,24 @@ vim.cmd('colorscheme habamax')
 vim.api.nvim_set_hl(0, "Normal", { bg = "NONE", ctermbg = "NONE" })
 
 --------------
+--- NVIM API STUFF
+--------------
+vim.api.nvim_create_user_command('RIB', function()
+    vim.ui.input({ prompt = 'Shell command: ' }, function(input)
+        if not input or input == "" then return end
+        vim.cmd('new')
+
+        local buf = vim.api.nvim_get_current_buf()
+        vim.api.nvim_set_option_value('buftype', 'nofile', { buf = buf })
+        vim.api.nvim_set_option_value('bufhidden', 'wipe', { buf = buf })
+        vim.api.nvim_set_option_value('swapfile', false, { buf = buf })
+        
+        vim.cmd('r !' .. input)
+        vim.cmd('1delete _')
+    end)
+end, {})
+
+--------------
 -- KEYMAPS
 --------------
 vim.g.mapleader = " "
@@ -46,6 +64,7 @@ map('n', ':', ':<C-f>i')
 map('n', '<leader>q', vim.diagnostic.setqflist, { desc = 'Open diagnostics list' })
 map('n', '<leader>sq', '<cmd>lua vim.diagnostic.setloclist()<cr>', { desc = 'Open diagnostic [Q]uickfix list' })
 map('n', '<leader>ss',  '<cmd>LspClangdSwitchSourceHeader<CR>' )
+map('n', '<leader>bb', '<cmd>RIB<CR>' )
 
 --------------
 -- PLUGINS
