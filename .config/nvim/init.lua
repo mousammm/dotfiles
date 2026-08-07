@@ -44,6 +44,7 @@ vim.api.nvim_create_user_command('RIB', function()
         vim.api.nvim_set_option_value('buftype', 'nofile', { buf = buf })
         vim.api.nvim_set_option_value('bufhidden', 'wipe', { buf = buf })
         vim.api.nvim_set_option_value('swapfile', false, { buf = buf })
+        vim.api.nvim_set_option_value('filetype', 'lua', { buf = buf })
         
         vim.cmd('r !' .. input)
         vim.cmd('1delete _')
