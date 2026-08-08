@@ -4,7 +4,8 @@
 set t_Co=256
 set nocompatible " remove vi support
 
-filetype plugin indent on
+filetype plugin on
+set omnifunc=syntaxcomplete
 set expandtab " tab to spaces
 set shiftwidth=2
 set softtabstop=2
@@ -20,7 +21,8 @@ set wildmenu
 set wildoptions=pum
 
 syntax on
-colorscheme default
+" colorscheme habamax
+colorscheme unokai
 highlight Normal ctermbg=NONE
 
 " ----------------

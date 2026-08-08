@@ -14,7 +14,6 @@ alias kkk='kitten icat --align left'
 
 export EDITOR=vim
 export LESS="--incsearch"
-export MANPAGER="vim -M +MANPAGER -"
 
 set -o vi
 set keyseq-timeout 0
