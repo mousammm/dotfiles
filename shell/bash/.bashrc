@@ -11,6 +11,7 @@ alias l='ls -l'
 alias ll='ls -lSah --group-directories-first'
 alias vim='nvim'
 alias kkk='kitten icat --align left'
+alias lasi='~/bin/bin/nvim'
 
 export EDITOR=vim
 export LESS="--incsearch"

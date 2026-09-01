@@ -94,13 +94,7 @@ local lsp_ITS = {
 
 require("lazy").setup({
 
-  {
-    "mousammm/billa.nvim",
-    config = function()
-      require("billa").setup()
-    end
-  },
-
+  -- LSP setup
   {
     "saghen/blink.cmp",
     version = "*",
@@ -165,6 +159,51 @@ require("lazy").setup({
     end,
   },
 
+  -- scratch buffer for eval shell/lua
+  {
+    "mousammm/billa.nvim",
+    config = function()
+      require("billa").setup({
+        splash_screen = false,
+      })
+    end
+  },
+
+  -- fuzzy finder
+  {
+    'dmtrKovalenko/fff',
+    build = function()
+      require("fff.download").download_or_build_binary()
+    end,
+    opts = { debug = { enabled = true, show_scores = true, }, },
+    lazy = false,
+    keys = {
+      { "ff", function() require('fff').find_files() end, desc = 'FFFind files' },
+      { "fg", function() require('fff').live_grep() end, desc = 'LiFFFe grep' },
+      { "fz",
+        function() require('fff').live_grep({ grep = { modes = { 'fuzzy', 'plain' } } }) end,
+        desc = 'Live fffuzy grep',
+      },
+      { "fw",
+        function() require('fff').live_grep_under_cursor() end,
+        mode = { 'n', 'x' },
+        desc = 'Search current word / selection',
+      },
+    },
+    config = function()
+      require('fff').setup({
+        prompt = '> ',
+        title = 'findInFiles',
+        prompt_vim_mode = true,
+        follow_symlinks = true,
+        layout = {
+          border = none,
+          show_scrollbar = false,
+        }, 
+      })
+    end,
+  },
+
   -- NEXT PLUGIN HERE
 
   }, {
@@ -172,3 +211,16 @@ require("lazy").setup({
     lazy = false,
   },
 })
+
+-- FFF colors
+vim.api.nvim_set_hl(0, 'Pmenu', { bg = 'NONE', fg = 'NONE' })
+vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'NONE', fg = 'NONE' })
+vim.api.nvim_set_hl(0, 'FloatBorder', { bg = 'NONE', fg = 'NONE' })
+
+hl = {
+  winhl = {
+    prompt  = 'Normal:Pmenu,FloatBorder:FloatBorder',
+    list    = 'Normal:NormalFloat,FloatBorder:FloatBorder',
+    preview = 'Normal:NormalFloat,FloatBorder:FloatBorder',
+  },
+}
