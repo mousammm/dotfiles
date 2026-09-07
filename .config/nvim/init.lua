@@ -14,7 +14,7 @@ vim.o.autoindent = true
 vim.o.showmode = false
 vim.o.cmdheight = 1
 vim.o.laststatus=0
-vim.opt.guicursor:append("i-ci-ve:block")
+-- vim.opt.guicursor:append("i-ci-ve:block")
 
 vim.opt.incsearch = true
 vim.opt.hlsearch = true
@@ -30,7 +30,17 @@ vim.o.expandtab = true
 vim.o.termguicolors = true
 vim.o.background = "dark"
 vim.cmd('colorscheme habamax')
+-- vim.cmd('colorscheme retrobox')
 vim.api.nvim_set_hl(0, "Normal", { bg = "NONE", ctermbg = "NONE" })
+
+vim.opt.list = false
+vim.opt.listchars = {
+  -- space = '·',
+  -- tab = '→ ',
+  -- trail = '•',
+  -- eol = '↲',
+  -- nbsp = '␣'
+}
 
 --------------
 --- NVIM API STUFF
@@ -154,7 +164,7 @@ require("lazy").setup({
       vim.diagnostic.config({
         signs = false,
         virtual_text = false,
-        underline = true,
+        underline = false,
      })
     end,
   },
@@ -178,13 +188,13 @@ require("lazy").setup({
     opts = { debug = { enabled = true, show_scores = true, }, },
     lazy = false,
     keys = {
-      { "ff", function() require('fff').find_files() end, desc = 'FFFind files' },
-      { "fg", function() require('fff').live_grep() end, desc = 'LiFFFe grep' },
-      { "fz",
+      { "<leader>ff", function() require('fff').find_files() end, desc = 'FFFind files' },
+      { "<leader>fg", function() require('fff').live_grep() end, desc = 'LiFFFe grep' },
+      { "<leader>fz",
         function() require('fff').live_grep({ grep = { modes = { 'fuzzy', 'plain' } } }) end,
         desc = 'Live fffuzy grep',
       },
-      { "fw",
+      { "<leader>fw",
         function() require('fff').live_grep_under_cursor() end,
         mode = { 'n', 'x' },
         desc = 'Search current word / selection',
