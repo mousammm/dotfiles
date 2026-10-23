@@ -22,29 +22,17 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 vim.o.inccommand = 'split'
-vim.o.shiftwidth = 2
-vim.o.tabstop = 2
-vim.o.softtabstop = 2
+vim.o.shiftwidth = 4
+vim.o.tabstop = 4
+vim.o.softtabstop = 4
 vim.o.expandtab = true
 
 vim.o.termguicolors = true
 vim.o.background = "dark"
 vim.cmd('colorscheme habamax')
--- vim.cmd('colorscheme retrobox')
 vim.api.nvim_set_hl(0, "Normal", { bg = "NONE", ctermbg = "NONE" })
 
-vim.opt.list = false
-vim.opt.listchars = {
-  -- space = '·',
-  -- tab = '→ ',
-  -- trail = '•',
-  -- eol = '↲',
-  -- nbsp = '␣'
-}
-
---------------
---- NVIM API STUFF
---------------
+--- <leader> b: run shell cmd
 vim.api.nvim_create_user_command('RIB', function()
     vim.ui.input({ prompt = 'Shell command: ' }, function(input)
         if not input or input == "" then return end
@@ -99,7 +87,7 @@ vim.opt.rtp:prepend(lazypath)
 -- lspinstall
 local lsp_ITS = {
   "clangd",
-  "ols",
+  "rust_analyzer",
 }
 
 require("lazy").setup({
@@ -163,8 +151,8 @@ require("lazy").setup({
 
       vim.diagnostic.config({
         signs = false,
-        virtual_text = false,
-        underline = false,
+        virtual_text = true,
+        underline = true,
      })
     end,
   },

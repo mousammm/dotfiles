@@ -19,3 +19,4 @@ export LESS="--incsearch"
 set -o vi
 set keyseq-timeout 0
 export PS1="\w \n "
+. "$HOME/.cargo/env"

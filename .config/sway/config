@@ -13,6 +13,7 @@ set $up k
 set $right l
 set $term kitty
 set $browser firefox
+set $menu wmenu-run -f "Iosevka 20"
 
 # swaymsg -t get_outputs
 output HDMI-A-1 mode 1920x1080@100Hz bg ~/dotfiles/asset/walls/nirvana-pape.png fill
@@ -27,6 +28,7 @@ bindsym $mod+Return exec $term
 bindsym $mod+Shift+q kill
 bindsym $mod+Shift+b exec $browser
 bindsym $mod+Shift+c reload
+bindsym $mod+d exec $menu
 
 floating_modifier $mod normal
 bindsym $mod+Shift+e exec swaymsg exit
