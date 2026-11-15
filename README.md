@@ -12,28 +12,32 @@ $ ./scripts/setup.sh   # Symlink dotfiles (requires GNU Stow)
 
 ---
 
-### Linux stuff
+**absolute**
 
-* **VCS** : `git`
-* **Shell** : `bash`
-* **Terminal** : `kitty` builtin image viewer (`.ppm` support)
-* **Multiplexer** : `tmux`
-* **Editor** : `vim` / `nvim`
-* **Browser** : `firefox`
+```txt
+$ git
+$ bash
+$ kitty builtin image viewer (.ppm support)
+$ tmux
+$ vim / nvim
+$ firefox
+```
 
-### Wayland Stuff
+**Wayland Stuff**
 
-* **Window Manager** : `sway`
-* **Status Bar** : `i3status`
-* **Wallpaper** : `swaybg`
-* **Audio / Volume** : `pulseaudio`, `pipewire`, `pipewire-pulse`, `wireplumber`, `libpulse`
-* **Brightness** : Not used `brightnessctl`
-* *Screenshot** : `grim`, `slurp`, `swappy`
-* **Screen Recorder** : `wf-recorder`
-* **Clipboard** : `wl-clipboard`
+```txt
+$ sway i3status swaybg
+$ pulseaudio, pipewire, pipewire-pulse, wireplumber, libpulse
+$ brightnessctl (!used)
+$ grim, slurp, swappy
+$ wf-recorder
+$ wl-clipboard
+```
 
-### gnutils
+**gnutils**
 
-* **`ncdu`**
-* **`strace`**
-* **`htop`**
+```txt
+$ ncdu
+$ strace
+$ htop
+```
