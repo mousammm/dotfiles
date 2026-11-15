@@ -9,9 +9,8 @@ shopt -s checkwinsize
 alias ls='ls --color=auto'
 alias l='ls -l'
 alias ll='ls -lSah --group-directories-first'
-# alias vim='nvim'
+alias vim='nvim'
 alias kkk='kitten icat --align left'
-alias vim='~/bin/bin/nvim'
 
 export EDITOR=vim
 export LESS="--incsearch"
@@ -19,4 +18,5 @@ export LESS="--incsearch"
 set -o vi
 set keyseq-timeout 0
 export PS1="\w \n "
-. "$HOME/.cargo/env"
+export PATH="$HOME/opt/i386-elf-7.5.0-Linux-x86_64/bin:$PATH"
+export PATH="$HOME/opt/fasm:$PATH"

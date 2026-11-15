@@ -14,7 +14,7 @@ vim.o.autoindent = true
 vim.o.showmode = false
 vim.o.cmdheight = 1
 vim.o.laststatus=0
--- vim.opt.guicursor:append("i-ci-ve:block")
+vim.opt.guicursor:append("i-ci-ve:block")
 
 vim.opt.incsearch = true
 vim.opt.hlsearch = true
@@ -32,23 +32,6 @@ vim.o.background = "dark"
 vim.cmd('colorscheme habamax')
 vim.api.nvim_set_hl(0, "Normal", { bg = "NONE", ctermbg = "NONE" })
 
---- <leader> b: run shell cmd
-vim.api.nvim_create_user_command('RIB', function()
-    vim.ui.input({ prompt = 'Shell command: ' }, function(input)
-        if not input or input == "" then return end
-        vim.cmd('new')
-
-        local buf = vim.api.nvim_get_current_buf()
-        vim.api.nvim_set_option_value('buftype', 'nofile', { buf = buf })
-        vim.api.nvim_set_option_value('bufhidden', 'wipe', { buf = buf })
-        vim.api.nvim_set_option_value('swapfile', false, { buf = buf })
-        vim.api.nvim_set_option_value('filetype', 'lua', { buf = buf })
-        
-        vim.cmd('r !' .. input)
-        vim.cmd('1delete _')
-    end)
-end, {})
-
 --------------
 -- KEYMAPS
 --------------
@@ -63,7 +46,14 @@ map('n', ':', ':<C-f>i')
 map('n', '<leader>q', vim.diagnostic.setqflist, { desc = 'Open diagnostics list' })
 map('n', '<leader>sq', '<cmd>lua vim.diagnostic.setloclist()<cr>', { desc = 'Open diagnostic [Q]uickfix list' })
 map('n', '<leader>ss',  '<cmd>LspClangdSwitchSourceHeader<CR>' )
-map('n', '<leader>bb', '<cmd>RIB<CR>' )
+
+-- syntax for unknown file types
+vim.filetype.add({
+  extension = {
+    inc = "asm",
+    ssa = "dosini",
+  },
+})
 
 --------------
 -- PLUGINS
@@ -87,7 +77,6 @@ vim.opt.rtp:prepend(lazypath)
 -- lspinstall
 local lsp_ITS = {
   "clangd",
-  "rust_analyzer",
 }
 
 require("lazy").setup({
@@ -151,8 +140,8 @@ require("lazy").setup({
 
       vim.diagnostic.config({
         signs = false,
-        virtual_text = true,
-        underline = true,
+        virtual_text = false,
+        underline = false,
      })
     end,
   },

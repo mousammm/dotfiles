@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
-# KHELL=bash
-KHELL=zsh
-. $HOME/dotfiles/shell/$KHELL/setup.sh
+KHELL=bash
+. $HOME/dotfiles/$KHELL/setup.sh
 
 # check if stow is installed
 if ! command -v stow &> /dev/null; then
@@ -10,9 +9,9 @@ if ! command -v stow &> /dev/null; then
     exit 1
 fi
 
-# add everything except shell
+# add everything except shell(bash)
 DOT_DIR="$HOME/dotfiles"
-FILES=(".tmux.conf" ".vimrc" ".gitconfig")
+FILES=(".tmux.conf" ".vimrc" ".gitconfig" ".gdbinit")
 
 # Link Files with verbose output
 for f in "${FILES[@]}"; do

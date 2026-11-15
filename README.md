@@ -1,19 +1,26 @@
 ## dots (wayland)
 
-### dependencies
-```
-# BASE
-git | (bash/zsh)
+git, bash
 
-# Terminal
-Kitty |  tmux | (vim/nvim)
+Kitty
+tmux
+vim/nvim
 
-# Window manager
-sway | i3status | swaybg
-grim | slurp    | swappy
+sway
+i3status
+swaybg
+
+grim
+slurp
+swappy
+
 wl-copy
-wf-recorder
+wf-recorder --audio="alsa_output.pci-0000_30_00.6.analog-stereo.monitor" -f output.mp4
 pipewire | pipewire-pulse | wireplumber | libpulse
+
+#tools
+ncdu: disk cleanup
+strace: syscall trace
 ```
 
 ![img](./asset/preview.png)

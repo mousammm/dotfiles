@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DIR="$HOME/dotfiles/shell/bash"
+DIR="$HOME/dotfiles/bash"
 FILES=( ".bashrc" ".bash_profile" ".inputrc" )
 
 for f in "${FILES[@]}"; do
