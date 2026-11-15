@@ -1,31 +1,39 @@
 ## dots (wayland)
 
+> [!NOTE]
+> Clone or place this repository in `$HOME/dotfiles` before running the setup scripts.
+
+### Installation
+
 ```console
-$ ./scripts/iFonts.sh # Install Font
-$ ./scripts/setup.sh  # Symlink (gnu stow required)
+$ ./scripts/iFonts.sh  # Install required fonts
+$ ./scripts/setup.sh   # Symlink dotfiles (requires GNU Stow)
 ```
-> [NOTE]
-> put the repo in $HOME/dotfiles
 
-**Linux Specifc**
-VCS : git
-Shell: bash
-Terminal Emulator : kitty(builtin img viever; support .ppm)
-Multiplexer : tmux
-Editor : VIM/NVIM
-Browser : Firefox
+---
 
-**Wayland Specific**
-Tiling Window Manager : sway
-Satus bar : i3status
-For wallpaper : swaybg
-Volume : Pulseaudio (pipewire | pipewire-pulse | wireplumber | libpulse)
-BrinessControl : Notuse (brightnessctl)
-ScreenShot : grim, slurp, swappy
-Screent recorder : wf-recorder
-Clipboard : wl-copy
+### Linux stuff
 
-**gnutils**
-ncdu : disk cleanup
-strace : syscall trace
-htop : process management
+* **VCS** : `git`
+* **Shell** : `bash`
+* **Terminal** : `kitty` builtin image viewer (`.ppm` support)
+* **Multiplexer** : `tmux`
+* **Editor** : `vim` / `nvim`
+* **Browser** : `firefox`
+
+### Wayland Stuff
+
+* **Window Manager** : `sway`
+* **Status Bar** : `i3status`
+* **Wallpaper** : `swaybg`
+* **Audio / Volume** : `pulseaudio`, `pipewire`, `pipewire-pulse`, `wireplumber`, `libpulse`
+* **Brightness** : Not used `brightnessctl`
+* *Screenshot** : `grim`, `slurp`, `swappy`
+* **Screen Recorder** : `wf-recorder`
+* **Clipboard** : `wl-clipboard`
+
+### gnutils
+
+* **`ncdu`**
+* **`strace`**
+* **`htop`**
