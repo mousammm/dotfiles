@@ -47,6 +47,11 @@ map('n', '<leader>q', vim.diagnostic.setqflist, { desc = 'Open diagnostics list'
 map('n', '<leader>sq', '<cmd>lua vim.diagnostic.setloclist()<cr>', { desc = 'Open diagnostic [Q]uickfix list' })
 map('n', '<leader>ss',  '<cmd>LspClangdSwitchSourceHeader<CR>' )
 
+-- nvim term
+map('n', '<leader>th', ':split | terminal<CR>i')
+map('n', '<leader>tv', ':vsplit | terminal<CR>i')
+map('t', '<Esc>', '<C-\\><C-n>')
+
 -- syntax for unknown file types
 vim.filetype.add({
   extension = {

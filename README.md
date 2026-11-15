@@ -1,26 +1,31 @@
 ## dots (wayland)
 
-git, bash
-
-Kitty
-tmux
-vim/nvim
-
-sway
-i3status
-swaybg
-
-grim
-slurp
-swappy
-
-wl-copy
-wf-recorder --audio="alsa_output.pci-0000_30_00.6.analog-stereo.monitor" -f output.mp4
-pipewire | pipewire-pulse | wireplumber | libpulse
-
-#tools
-ncdu: disk cleanup
-strace: syscall trace
+```console
+$ ./scripts/iFonts.sh # Install Font
+$ ./scripts/setup.sh  # Symlink (gnu stow required)
 ```
+> [NOTE]
+> put the repo in $HOME/dotfiles
 
-![img](./asset/preview.png)
+**Linux Specifc**
+VCS : git
+Shell: bash
+Terminal Emulator : kitty(builtin img viever; support .ppm)
+Multiplexer : tmux
+Editor : VIM/NVIM
+Browser : Firefox
+
+**Wayland Specific**
+Tiling Window Manager : sway
+Satus bar : i3status
+For wallpaper : swaybg
+Volume : Pulseaudio (pipewire | pipewire-pulse | wireplumber | libpulse)
+BrinessControl : Notuse (brightnessctl)
+ScreenShot : grim, slurp, swappy
+Screent recorder : wf-recorder
+Clipboard : wl-copy
+
+**gnutils**
+ncdu : disk cleanup
+strace : syscall trace
+htop : process management
