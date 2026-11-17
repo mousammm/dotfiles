@@ -16,7 +16,7 @@ set $browser firefox
 set $menu wmenu-run -f "Iosevka 20" -l 20
 
 # swaymsg -t get_outputs
-output HDMI-A-1 mode 1920x1080@100Hz bg ~/dotfiles/asset/walls/nirvana-pape.png fill
+output HDMI-A-1 mode 1920x1080@100Hz bg ~/dotfiles/asset/walls/a_painting_of_a_tree_and_water.jpg fill
 font Iosevka 15
 
 input * {
