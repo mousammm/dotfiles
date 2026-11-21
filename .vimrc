@@ -8,11 +8,11 @@ set visualbell t_vb=
 
 filetype plugin on
 set omnifunc=syntaxcomplete
-set expandtab
-set shiftwidth=2
-set softtabstop=2
-set tabstop=2
 set smartindent
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
+set expandtab
 
 set incsearch
 set hlsearch
@@ -32,11 +32,6 @@ highlight Normal ctermbg=NONE
 " KEYMAPS
 " ----------------
 
-nnoremap - :Ex<CR>
-nnoremap <Esc><Esc> :nohlsearch<CR>
-nnoremap ; :
-nnoremap <TAB> gt
-
-" move selected lines
-xnoremap <tab> :sil! m '>+1<CR>gv
-xnoremap <s-tab> :sil! m '<-2<CR>gv
+nmap - :Ex<CR>
+nmap <Esc><Esc> :nohlsearch<CR>
+nmap ; :

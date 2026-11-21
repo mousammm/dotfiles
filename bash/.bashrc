@@ -9,7 +9,7 @@ shopt -s checkwinsize
 alias ls='ls --color=auto'
 alias l='ls -l'
 alias ll='ls -lSah --group-directories-first'
-alias vim='nvim'
+#alias vim='nvim'
 alias kkk='kitten icat --align left'
 
 export EDITOR=vim

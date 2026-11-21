@@ -10,4 +10,4 @@
     s  = status
 	b  = branch
 	c  = commit
-	lg = log --graph --oneline
+	lg = log --oneline --graph --all --decorate
