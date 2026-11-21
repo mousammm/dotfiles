@@ -4,10 +4,10 @@
 [init]
 	defaultBranch = main
 [core]
-	editor = vim
+	editor = nvim
 	autocrlf = input
 [alias]
     s  = status
 	b  = branch
 	c  = commit
-	lg = log --graph --oneline
+	lg = log --oneline --graph --all --decorate
